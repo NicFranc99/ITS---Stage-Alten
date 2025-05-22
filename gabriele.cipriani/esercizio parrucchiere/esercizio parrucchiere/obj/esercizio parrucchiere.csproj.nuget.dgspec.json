@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mcipriani2\\Desktop\\esercizio parrucchiere\\esercizio parrucchiere\\esercizio parrucchiere.csproj": {}
+    "C:\\Users\\mcipriani2\\Desktop\\ITS repo\\ITS---Stage-Alten\\gabriele.cipriani\\esercizio parrucchiere\\esercizio parrucchiere\\esercizio parrucchiere.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mcipriani2\\Desktop\\esercizio parrucchiere\\esercizio parrucchiere\\esercizio parrucchiere.csproj": {
+    "C:\\Users\\mcipriani2\\Desktop\\ITS repo\\ITS---Stage-Alten\\gabriele.cipriani\\esercizio parrucchiere\\esercizio parrucchiere\\esercizio parrucchiere.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mcipriani2\\Desktop\\esercizio parrucchiere\\esercizio parrucchiere\\esercizio parrucchiere.csproj",
+        "projectUniqueName": "C:\\Users\\mcipriani2\\Desktop\\ITS repo\\ITS---Stage-Alten\\gabriele.cipriani\\esercizio parrucchiere\\esercizio parrucchiere\\esercizio parrucchiere.csproj",
         "projectName": "esercizio parrucchiere",
-        "projectPath": "C:\\Users\\mcipriani2\\Desktop\\esercizio parrucchiere\\esercizio parrucchiere\\esercizio parrucchiere.csproj",
+        "projectPath": "C:\\Users\\mcipriani2\\Desktop\\ITS repo\\ITS---Stage-Alten\\gabriele.cipriani\\esercizio parrucchiere\\esercizio parrucchiere\\esercizio parrucchiere.csproj",
         "packagesPath": "C:\\Users\\mcipriani2\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mcipriani2\\Desktop\\esercizio parrucchiere\\esercizio parrucchiere\\obj\\",
+        "outputPath": "C:\\Users\\mcipriani2\\Desktop\\ITS repo\\ITS---Stage-Alten\\gabriele.cipriani\\esercizio parrucchiere\\esercizio parrucchiere\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -44,7 +44,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -65,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -8,16 +8,16 @@ using esercizio_parrucchiere;
 
 List<Clienti> listaClienti = new List<Clienti>()
 {
-     new Clienti("Gabriele", "Cipriani", 20, "cipriani279@gmail.com", 3913720324),
-     new Clienti("Thomas", "Petaroscia", 22, "t.petaroscia@gmail.com", 3476589234),
-     new Clienti("Nicola", "Francavilla", 26, "n.francavilla@gmail.com", 3758945631),
-     new Clienti("Matteo", "Mennitti", 35, "m.mennitti@gmail.com", 333756328),
-     new Clienti("Lorenzo", "Coppola", 23, "l.coppola@gmail.com", 3812520384),
-     new Clienti("Francesco", "Caselli", 21, "f.caselli@gmail.com", 3182260226),
-     new Clienti("Vincenzo", "Montagna", 31, "v.montagna@gmail.com", 3896461530),
-     new Clienti("Marco", "Perrelli", 20, "m.perrelli@gmail.com", 3714162621),
-     new Clienti("Giuseppe", "Lategola", 20, "g.lategola@gmail.com", 3453510517),
-     new Clienti("Mauro", "Petruzzella", 43, "m.petruzzella@gmail.com", 3568975128)
+     new Clienti("Gabriele", "Cipriani", 20, "cipriani279@gmail.com", 3913720324,Clienti.Sesso.Maschio),
+     new Clienti("Thomas", "Petaroscia", 22, "t.petaroscia@gmail.com", 3476589234,Clienti.Sesso.Maschio),
+     new Clienti("Nicola", "Francavilla", 26, "n.francavilla@gmail.com", 3758945631,Clienti.Sesso.Maschio),
+     new Clienti("Matteo", "Mennitti", 35, "m.mennitti@gmail.com", 333756328, Clienti.Sesso.Maschio),
+     new Clienti("Lorenzo", "Coppola", 23, "l.coppola@gmail.com", 3812520384, Clienti.Sesso.Femmina),
+     new Clienti("Francesco", "Caselli", 21, "f.caselli@gmail.com", 3182260226, Clienti.Sesso.Altro),
+     new Clienti("Vincenzo", "Montagna", 31, "v.montagna@gmail.com", 3896461530, Clienti.Sesso.Femmina),
+     new Clienti("Marco", "Perrelli", 20, "m.perrelli@gmail.com", 3714162621, Clienti.Sesso.Altro),
+     new Clienti("Giuseppe", "Lategola", 20, "g.lategola@gmail.com", 3453510517, Clienti.Sesso.Maschio),
+     new Clienti("Mauro", "Petruzzella", 43, "m.petruzzella@gmail.com", 3568975128, Clienti.Sesso.Femmina)
 
 };
 List<Servizi> listaServizi = new List<Servizi>()

@@ -17,17 +17,24 @@ namespace esercizio_parrucchiere
                 foreach (Clienti cliente in Clienti)
                 {
                     i++;
-                    Console.WriteLine($"{i}) {cliente.FirstName} {cliente.LastName}  {cliente.Age} {cliente.Email} {cliente.PhoneNumber}");
+                    Console.WriteLine($"{i}) {cliente.ToString()}");
                    
                 }
 
            
         }
+       
+
+
+
+
+
+
 
         public void AddClient()
         {
             int age = 0;
-        
+            
           
             Console.WriteLine("inserisci nome cliente");
             string firstName = Console.ReadLine();
@@ -39,9 +46,12 @@ namespace esercizio_parrucchiere
             string email = Console.ReadLine();
             Console.WriteLine("inserisci il numero di telefono");
             long phoneNumber = Convert.ToInt64(Console.ReadLine());
-            Clienti clienteTastiera = new Clienti(firstName, lastName, age, email, phoneNumber);
+            
+            Clienti clienteTastiera = new Clienti(firstName, lastName, age, email, phoneNumber, esercizio_parrucchiere.Clienti.Sesso.Maschio);
+           // clienteTastiera.Sex = Clienti.Sesso.Maschio;
             Clienti.Add(clienteTastiera);
             Console.WriteLine("Cliente aggiunto alla lista");
+
 
         }
 

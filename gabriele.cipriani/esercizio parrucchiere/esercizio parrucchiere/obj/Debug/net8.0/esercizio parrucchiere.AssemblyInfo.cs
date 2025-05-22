@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("esercizio parrucchiere")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fc5edeae65a48820cf54cc3403ca28493dee99f1")]
 [assembly: System.Reflection.AssemblyProductAttribute("esercizio parrucchiere")]
 [assembly: System.Reflection.AssemblyTitleAttribute("esercizio parrucchiere")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
