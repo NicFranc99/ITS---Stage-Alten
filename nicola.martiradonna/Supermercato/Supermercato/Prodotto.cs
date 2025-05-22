@@ -8,9 +8,17 @@ namespace Supermercato
 {
     class Prodotto
     {
+        public enum Tipo
+        {
+            Salato,
+            Dolce,
+            Altro
+        }
+
         public string NomeProdotto { get; set; }
         public double PrezzoProdotto { get; set; }
 
+        public Tipo TipoProdotto { get; set; }
         public int Quantita { get; set; }
 
         public int QuantitaProdottoSalvata = 0;
@@ -19,6 +27,7 @@ namespace Supermercato
 
         public void StampaProdotti(List<Prodotto> ListaProdotti)
         {
+            
             foreach (var item in ListaProdotti)
             {
 
@@ -28,7 +37,7 @@ namespace Supermercato
         }
         public override string ToString()
         {
-            return $"{NomeProdotto} \t{PrezzoProdotto} euro \t Quantità {Quantita}";
+            return $"{NomeProdotto} \t{PrezzoProdotto} euro \t Quantità {Quantita} \t TipoProdotto {TipoProdotto}";
 
         }
 
