@@ -1,0 +1,14 @@
+C:\Users\vmontagna\Desktop\esercizi stage\TestDelegate\TestDelegate\bin\Debug\net8.0\TestDelegate.exe
+C:\Users\vmontagna\Desktop\esercizi stage\TestDelegate\TestDelegate\bin\Debug\net8.0\TestDelegate.deps.json
+C:\Users\vmontagna\Desktop\esercizi stage\TestDelegate\TestDelegate\bin\Debug\net8.0\TestDelegate.runtimeconfig.json
+C:\Users\vmontagna\Desktop\esercizi stage\TestDelegate\TestDelegate\bin\Debug\net8.0\TestDelegate.dll
+C:\Users\vmontagna\Desktop\esercizi stage\TestDelegate\TestDelegate\bin\Debug\net8.0\TestDelegate.pdb
+C:\Users\vmontagna\Desktop\esercizi stage\TestDelegate\TestDelegate\obj\Debug\net8.0\TestDelegate.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vmontagna\Desktop\esercizi stage\TestDelegate\TestDelegate\obj\Debug\net8.0\TestDelegate.AssemblyInfoInputs.cache
+C:\Users\vmontagna\Desktop\esercizi stage\TestDelegate\TestDelegate\obj\Debug\net8.0\TestDelegate.AssemblyInfo.cs
+C:\Users\vmontagna\Desktop\esercizi stage\TestDelegate\TestDelegate\obj\Debug\net8.0\TestDelegate.csproj.CoreCompileInputs.cache
+C:\Users\vmontagna\Desktop\esercizi stage\TestDelegate\TestDelegate\obj\Debug\net8.0\TestDelegate.dll
+C:\Users\vmontagna\Desktop\esercizi stage\TestDelegate\TestDelegate\obj\Debug\net8.0\refint\TestDelegate.dll
+C:\Users\vmontagna\Desktop\esercizi stage\TestDelegate\TestDelegate\obj\Debug\net8.0\TestDelegate.pdb
+C:\Users\vmontagna\Desktop\esercizi stage\TestDelegate\TestDelegate\obj\Debug\net8.0\TestDelegate.genruntimeconfig.cache
+C:\Users\vmontagna\Desktop\esercizi stage\TestDelegate\TestDelegate\obj\Debug\net8.0\ref\TestDelegate.dll

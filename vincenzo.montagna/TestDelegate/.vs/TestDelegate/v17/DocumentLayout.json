@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\vmontagna\\Desktop\\esercizi stage\\TestDelegate\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B8B81F88-007F-40E5-A9BF-9438C92C02A7}|TestDelegate\\TestDelegate.csproj|c:\\users\\vmontagna\\desktop\\esercizi stage\\testdelegate\\testdelegate\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8B81F88-007F-40E5-A9BF-9438C92C02A7}|TestDelegate\\TestDelegate.csproj|solutionrelative:testdelegate\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8B81F88-007F-40E5-A9BF-9438C92C02A7}|TestDelegate\\TestDelegate.csproj|c:\\users\\vmontagna\\desktop\\esercizi stage\\testdelegate\\testdelegate\\testdelegate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8B81F88-007F-40E5-A9BF-9438C92C02A7}|TestDelegate\\TestDelegate.csproj|solutionrelative:testdelegate\\testdelegate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8B81F88-007F-40E5-A9BF-9438C92C02A7}|TestDelegate\\TestDelegate.csproj|c:\\users\\vmontagna\\desktop\\esercizi stage\\testdelegate\\testdelegate\\mydelegate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8B81F88-007F-40E5-A9BF-9438C92C02A7}|TestDelegate\\TestDelegate.csproj|solutionrelative:testdelegate\\mydelegate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8B81F88-007F-40E5-A9BF-9438C92C02A7}|TestDelegate\\TestDelegate.csproj|c:\\users\\vmontagna\\desktop\\esercizi stage\\testdelegate\\testdelegate\\estensionistringa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8B81F88-007F-40E5-A9BF-9438C92C02A7}|TestDelegate\\TestDelegate.csproj|solutionrelative:testdelegate\\estensionistringa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EstensioniStringa.cs",
+              "DocumentMoniker": "C:\\Users\\vmontagna\\Desktop\\esercizi stage\\TestDelegate\\TestDelegate\\EstensioniStringa.cs",
+              "RelativeDocumentMoniker": "TestDelegate\\EstensioniStringa.cs",
+              "ToolTip": "C:\\Users\\vmontagna\\Desktop\\esercizi stage\\TestDelegate\\TestDelegate\\EstensioniStringa.cs",
+              "RelativeToolTip": "TestDelegate\\EstensioniStringa.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAswAkAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T10:17:36.944Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MyDelegate.cs",
+              "DocumentMoniker": "C:\\Users\\vmontagna\\Desktop\\esercizi stage\\TestDelegate\\TestDelegate\\MyDelegate.cs",
+              "RelativeDocumentMoniker": "TestDelegate\\MyDelegate.cs",
+              "ToolTip": "C:\\Users\\vmontagna\\Desktop\\esercizi stage\\TestDelegate\\TestDelegate\\MyDelegate.cs",
+              "RelativeToolTip": "TestDelegate\\MyDelegate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T08:16:06.59Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TestDelegate.cs",
+              "DocumentMoniker": "C:\\Users\\vmontagna\\Desktop\\esercizi stage\\TestDelegate\\TestDelegate\\TestDelegate.cs",
+              "RelativeDocumentMoniker": "TestDelegate\\TestDelegate.cs",
+              "ToolTip": "C:\\Users\\vmontagna\\Desktop\\esercizi stage\\TestDelegate\\TestDelegate\\TestDelegate.cs",
+              "RelativeToolTip": "TestDelegate\\TestDelegate.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T13:44:51.502Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\vmontagna\\Desktop\\esercizi stage\\TestDelegate\\TestDelegate\\Program.cs",
+              "RelativeDocumentMoniker": "TestDelegate\\Program.cs",
+              "ToolTip": "C:\\Users\\vmontagna\\Desktop\\esercizi stage\\TestDelegate\\TestDelegate\\Program.cs",
+              "RelativeToolTip": "TestDelegate\\Program.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBMAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T13:37:16.229Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
