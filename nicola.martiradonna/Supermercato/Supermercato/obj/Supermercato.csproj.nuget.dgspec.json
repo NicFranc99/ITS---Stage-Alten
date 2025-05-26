@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nmartiradonna\\source\\repos\\Supermercato\\Supermercato\\Supermercato.csproj": {}
+    "C:\\Users\\nmartiradonna\\Desktop\\repo\\ITS---Stage-Alten\\nicola.martiradonna\\Supermercato\\Supermercato\\Supermercato.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nmartiradonna\\source\\repos\\Supermercato\\Supermercato\\Supermercato.csproj": {
+    "C:\\Users\\nmartiradonna\\Desktop\\repo\\ITS---Stage-Alten\\nicola.martiradonna\\Supermercato\\Supermercato\\Supermercato.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nmartiradonna\\source\\repos\\Supermercato\\Supermercato\\Supermercato.csproj",
+        "projectUniqueName": "C:\\Users\\nmartiradonna\\Desktop\\repo\\ITS---Stage-Alten\\nicola.martiradonna\\Supermercato\\Supermercato\\Supermercato.csproj",
         "projectName": "Supermercato",
-        "projectPath": "C:\\Users\\nmartiradonna\\source\\repos\\Supermercato\\Supermercato\\Supermercato.csproj",
+        "projectPath": "C:\\Users\\nmartiradonna\\Desktop\\repo\\ITS---Stage-Alten\\nicola.martiradonna\\Supermercato\\Supermercato\\Supermercato.csproj",
         "packagesPath": "C:\\Users\\nmartiradonna\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nmartiradonna\\source\\repos\\Supermercato\\Supermercato\\obj\\",
+        "outputPath": "C:\\Users\\nmartiradonna\\Desktop\\repo\\ITS---Stage-Alten\\nicola.martiradonna\\Supermercato\\Supermercato\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

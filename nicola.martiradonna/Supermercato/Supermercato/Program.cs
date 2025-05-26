@@ -7,6 +7,7 @@ Prodotto nutella = new Prodotto()
 {
     NomeProdotto = "Nutella",
     PrezzoProdotto = 4.50,
+    TipoProdotto = Prodotto.Tipo.Dolce,
     Quantita = 2
 
 };
@@ -15,6 +16,7 @@ Prodotto latteGranarolo = new Prodotto()
 {
     NomeProdotto = "Latte Granarolo",
     PrezzoProdotto = 3.50,
+    TipoProdotto = Prodotto.Tipo.Altro,
     Quantita = 3
 };
 
@@ -22,12 +24,14 @@ Prodotto cartaIgenicaScottex = new Prodotto()
 {
     NomeProdotto = "Carta Igenica Scottex",
     PrezzoProdotto = 2.00,
+    TipoProdotto = Prodotto.Tipo.Altro,
     Quantita = 2
 };
 
 Prodotto pennetteBarilla = new Prodotto()
 {
     NomeProdotto = "Pennette Barilla",
+    TipoProdotto = Prodotto.Tipo.Salato,
     PrezzoProdotto = 1.20,
     Quantita = 5
 };
