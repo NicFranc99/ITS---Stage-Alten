@@ -1,0 +1,43 @@
+C:\Users\mcipriani2\source\repos\esercizio parrucchiere\esercizio parrucchiere\obj\Debug\net8.0\esercizio parrucchiere.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mcipriani2\source\repos\esercizio parrucchiere\esercizio parrucchiere\obj\Debug\net8.0\esercizio parrucchiere.AssemblyInfoInputs.cache
+C:\Users\mcipriani2\source\repos\esercizio parrucchiere\esercizio parrucchiere\obj\Debug\net8.0\esercizio parrucchiere.AssemblyInfo.cs
+C:\Users\mcipriani2\source\repos\esercizio parrucchiere\esercizio parrucchiere\obj\Debug\net8.0\esercizio parrucchiere.csproj.CoreCompileInputs.cache
+C:\Users\mcipriani2\source\repos\esercizio parrucchiere\esercizio parrucchiere\bin\Debug\net8.0\esercizio parrucchiere.exe
+C:\Users\mcipriani2\source\repos\esercizio parrucchiere\esercizio parrucchiere\bin\Debug\net8.0\esercizio parrucchiere.deps.json
+C:\Users\mcipriani2\source\repos\esercizio parrucchiere\esercizio parrucchiere\bin\Debug\net8.0\esercizio parrucchiere.runtimeconfig.json
+C:\Users\mcipriani2\source\repos\esercizio parrucchiere\esercizio parrucchiere\bin\Debug\net8.0\esercizio parrucchiere.dll
+C:\Users\mcipriani2\source\repos\esercizio parrucchiere\esercizio parrucchiere\bin\Debug\net8.0\esercizio parrucchiere.pdb
+C:\Users\mcipriani2\source\repos\esercizio parrucchiere\esercizio parrucchiere\obj\Debug\net8.0\esercizio parrucchiere.dll
+C:\Users\mcipriani2\source\repos\esercizio parrucchiere\esercizio parrucchiere\obj\Debug\net8.0\refint\esercizio parrucchiere.dll
+C:\Users\mcipriani2\source\repos\esercizio parrucchiere\esercizio parrucchiere\obj\Debug\net8.0\esercizio parrucchiere.pdb
+C:\Users\mcipriani2\source\repos\esercizio parrucchiere\esercizio parrucchiere\obj\Debug\net8.0\esercizio parrucchiere.genruntimeconfig.cache
+C:\Users\mcipriani2\source\repos\esercizio parrucchiere\esercizio parrucchiere\obj\Debug\net8.0\ref\esercizio parrucchiere.dll
+C:\Users\mcipriani2\Desktop\esercizio parrucchiere\esercizio parrucchiere\bin\Debug\net8.0\esercizio parrucchiere.exe
+C:\Users\mcipriani2\Desktop\esercizio parrucchiere\esercizio parrucchiere\bin\Debug\net8.0\esercizio parrucchiere.deps.json
+C:\Users\mcipriani2\Desktop\esercizio parrucchiere\esercizio parrucchiere\bin\Debug\net8.0\esercizio parrucchiere.runtimeconfig.json
+C:\Users\mcipriani2\Desktop\esercizio parrucchiere\esercizio parrucchiere\bin\Debug\net8.0\esercizio parrucchiere.dll
+C:\Users\mcipriani2\Desktop\esercizio parrucchiere\esercizio parrucchiere\bin\Debug\net8.0\esercizio parrucchiere.pdb
+C:\Users\mcipriani2\Desktop\esercizio parrucchiere\esercizio parrucchiere\obj\Debug\net8.0\esercizio parrucchiere.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mcipriani2\Desktop\esercizio parrucchiere\esercizio parrucchiere\obj\Debug\net8.0\esercizio parrucchiere.AssemblyInfoInputs.cache
+C:\Users\mcipriani2\Desktop\esercizio parrucchiere\esercizio parrucchiere\obj\Debug\net8.0\esercizio parrucchiere.AssemblyInfo.cs
+C:\Users\mcipriani2\Desktop\esercizio parrucchiere\esercizio parrucchiere\obj\Debug\net8.0\esercizio parrucchiere.csproj.CoreCompileInputs.cache
+C:\Users\mcipriani2\Desktop\esercizio parrucchiere\esercizio parrucchiere\obj\Debug\net8.0\esercizio parrucchiere.dll
+C:\Users\mcipriani2\Desktop\esercizio parrucchiere\esercizio parrucchiere\obj\Debug\net8.0\refint\esercizio parrucchiere.dll
+C:\Users\mcipriani2\Desktop\esercizio parrucchiere\esercizio parrucchiere\obj\Debug\net8.0\esercizio parrucchiere.pdb
+C:\Users\mcipriani2\Desktop\esercizio parrucchiere\esercizio parrucchiere\obj\Debug\net8.0\esercizio parrucchiere.genruntimeconfig.cache
+C:\Users\mcipriani2\Desktop\esercizio parrucchiere\esercizio parrucchiere\obj\Debug\net8.0\ref\esercizio parrucchiere.dll
+C:\Users\mcipriani2\Desktop\ITS repo\ITS---Stage-Alten\gabriele.cipriani\esercizio parrucchiere\esercizio parrucchiere\obj\Debug\net8.0\esercizio parrucchiere.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mcipriani2\Desktop\ITS repo\ITS---Stage-Alten\gabriele.cipriani\esercizio parrucchiere\esercizio parrucchiere\obj\Debug\net8.0\esercizio parrucchiere.AssemblyInfoInputs.cache
+C:\Users\mcipriani2\Desktop\ITS repo\ITS---Stage-Alten\gabriele.cipriani\esercizio parrucchiere\esercizio parrucchiere\obj\Debug\net8.0\esercizio parrucchiere.AssemblyInfo.cs
+C:\Users\mcipriani2\Desktop\ITS repo\ITS---Stage-Alten\gabriele.cipriani\esercizio parrucchiere\esercizio parrucchiere\obj\Debug\net8.0\esercizio parrucchiere.csproj.CoreCompileInputs.cache
+C:\Users\mcipriani2\Desktop\ITS repo\ITS---Stage-Alten\gabriele.cipriani\esercizio parrucchiere\esercizio parrucchiere\obj\Debug\net8.0\esercizio parrucchiere.sourcelink.json
+C:\Users\mcipriani2\Desktop\ITS repo\ITS---Stage-Alten\gabriele.cipriani\esercizio parrucchiere\esercizio parrucchiere\obj\Debug\net8.0\esercizio parrucchiere.dll
+C:\Users\mcipriani2\Desktop\ITS repo\ITS---Stage-Alten\gabriele.cipriani\esercizio parrucchiere\esercizio parrucchiere\obj\Debug\net8.0\refint\esercizio parrucchiere.dll
+C:\Users\mcipriani2\Desktop\ITS repo\ITS---Stage-Alten\gabriele.cipriani\esercizio parrucchiere\esercizio parrucchiere\obj\Debug\net8.0\esercizio parrucchiere.pdb
+C:\Users\mcipriani2\Desktop\ITS repo\ITS---Stage-Alten\gabriele.cipriani\esercizio parrucchiere\esercizio parrucchiere\bin\Debug\net8.0\esercizio parrucchiere.exe
+C:\Users\mcipriani2\Desktop\ITS repo\ITS---Stage-Alten\gabriele.cipriani\esercizio parrucchiere\esercizio parrucchiere\bin\Debug\net8.0\esercizio parrucchiere.deps.json
+C:\Users\mcipriani2\Desktop\ITS repo\ITS---Stage-Alten\gabriele.cipriani\esercizio parrucchiere\esercizio parrucchiere\bin\Debug\net8.0\esercizio parrucchiere.runtimeconfig.json
+C:\Users\mcipriani2\Desktop\ITS repo\ITS---Stage-Alten\gabriele.cipriani\esercizio parrucchiere\esercizio parrucchiere\bin\Debug\net8.0\esercizio parrucchiere.dll
+C:\Users\mcipriani2\Desktop\ITS repo\ITS---Stage-Alten\gabriele.cipriani\esercizio parrucchiere\esercizio parrucchiere\bin\Debug\net8.0\esercizio parrucchiere.pdb
+C:\Users\mcipriani2\Desktop\ITS repo\ITS---Stage-Alten\gabriele.cipriani\esercizio parrucchiere\esercizio parrucchiere\obj\Debug\net8.0\esercizio parrucchiere.genruntimeconfig.cache
+C:\Users\mcipriani2\Desktop\ITS repo\ITS---Stage-Alten\gabriele.cipriani\esercizio parrucchiere\esercizio parrucchiere\obj\Debug\net8.0\ref\esercizio parrucchiere.dll

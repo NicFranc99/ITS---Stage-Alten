@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\nmartiradonna\\source\\repos\\Supermercato\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E6A5F91A-7861-4C66-A6B7-8D19D3525AAA}|Supermercato\\Supermercato.csproj|c:\\users\\nmartiradonna\\source\\repos\\supermercato\\supermercato\\scontrino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6A5F91A-7861-4C66-A6B7-8D19D3525AAA}|Supermercato\\Supermercato.csproj|solutionrelative:supermercato\\scontrino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6A5F91A-7861-4C66-A6B7-8D19D3525AAA}|Supermercato\\Supermercato.csproj|c:\\users\\nmartiradonna\\source\\repos\\supermercato\\supermercato\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6A5F91A-7861-4C66-A6B7-8D19D3525AAA}|Supermercato\\Supermercato.csproj|solutionrelative:supermercato\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6A5F91A-7861-4C66-A6B7-8D19D3525AAA}|Supermercato\\Supermercato.csproj|c:\\users\\nmartiradonna\\source\\repos\\supermercato\\supermercato\\magazzino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6A5F91A-7861-4C66-A6B7-8D19D3525AAA}|Supermercato\\Supermercato.csproj|solutionrelative:supermercato\\magazzino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6A5F91A-7861-4C66-A6B7-8D19D3525AAA}|Supermercato\\Supermercato.csproj|c:\\users\\nmartiradonna\\source\\repos\\supermercato\\supermercato\\prodotto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6A5F91A-7861-4C66-A6B7-8D19D3525AAA}|Supermercato\\Supermercato.csproj|solutionrelative:supermercato\\prodotto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Magazzino.cs",
+              "DocumentMoniker": "C:\\Users\\nmartiradonna\\source\\repos\\Supermercato\\Supermercato\\Magazzino.cs",
+              "RelativeDocumentMoniker": "Supermercato\\Magazzino.cs",
+              "ToolTip": "C:\\Users\\nmartiradonna\\source\\repos\\Supermercato\\Supermercato\\Magazzino.cs",
+              "RelativeToolTip": "Supermercato\\Magazzino.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwA4AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T07:38:38.698Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Prodotto.cs",
+              "DocumentMoniker": "C:\\Users\\nmartiradonna\\source\\repos\\Supermercato\\Supermercato\\Prodotto.cs",
+              "RelativeDocumentMoniker": "Supermercato\\Prodotto.cs",
+              "ToolTip": "C:\\Users\\nmartiradonna\\source\\repos\\Supermercato\\Supermercato\\Prodotto.cs",
+              "RelativeToolTip": "Supermercato\\Prodotto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T13:43:13.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Scontrino.cs",
+              "DocumentMoniker": "C:\\Users\\nmartiradonna\\source\\repos\\Supermercato\\Supermercato\\Scontrino.cs",
+              "RelativeDocumentMoniker": "Supermercato\\Scontrino.cs",
+              "ToolTip": "C:\\Users\\nmartiradonna\\source\\repos\\Supermercato\\Supermercato\\Scontrino.cs",
+              "RelativeToolTip": "Supermercato\\Scontrino.cs",
+              "ViewState": "AgIAAHoAAAAAAAAAAAAkwEMAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T14:20:56.01Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\nmartiradonna\\source\\repos\\Supermercato\\Supermercato\\Program.cs",
+              "RelativeDocumentMoniker": "Supermercato\\Program.cs",
+              "ToolTip": "C:\\Users\\nmartiradonna\\source\\repos\\Supermercato\\Supermercato\\Program.cs",
+              "RelativeToolTip": "Supermercato\\Program.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAAA8AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T13:42:28.737Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

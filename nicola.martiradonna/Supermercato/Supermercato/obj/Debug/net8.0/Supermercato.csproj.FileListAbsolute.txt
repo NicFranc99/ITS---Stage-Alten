@@ -1,0 +1,14 @@
+C:\Users\nmartiradonna\source\repos\Supermercato\Supermercato\obj\Debug\net8.0\Supermercato.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nmartiradonna\source\repos\Supermercato\Supermercato\obj\Debug\net8.0\Supermercato.AssemblyInfoInputs.cache
+C:\Users\nmartiradonna\source\repos\Supermercato\Supermercato\obj\Debug\net8.0\Supermercato.AssemblyInfo.cs
+C:\Users\nmartiradonna\source\repos\Supermercato\Supermercato\obj\Debug\net8.0\Supermercato.csproj.CoreCompileInputs.cache
+C:\Users\nmartiradonna\source\repos\Supermercato\Supermercato\bin\Debug\net8.0\Supermercato.exe
+C:\Users\nmartiradonna\source\repos\Supermercato\Supermercato\bin\Debug\net8.0\Supermercato.deps.json
+C:\Users\nmartiradonna\source\repos\Supermercato\Supermercato\bin\Debug\net8.0\Supermercato.runtimeconfig.json
+C:\Users\nmartiradonna\source\repos\Supermercato\Supermercato\bin\Debug\net8.0\Supermercato.dll
+C:\Users\nmartiradonna\source\repos\Supermercato\Supermercato\bin\Debug\net8.0\Supermercato.pdb
+C:\Users\nmartiradonna\source\repos\Supermercato\Supermercato\obj\Debug\net8.0\Supermercato.dll
+C:\Users\nmartiradonna\source\repos\Supermercato\Supermercato\obj\Debug\net8.0\refint\Supermercato.dll
+C:\Users\nmartiradonna\source\repos\Supermercato\Supermercato\obj\Debug\net8.0\Supermercato.pdb
+C:\Users\nmartiradonna\source\repos\Supermercato\Supermercato\obj\Debug\net8.0\Supermercato.genruntimeconfig.cache
+C:\Users\nmartiradonna\source\repos\Supermercato\Supermercato\obj\Debug\net8.0\ref\Supermercato.dll
