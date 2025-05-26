@@ -1,0 +1,68 @@
+[
+  {
+    "title": "Il Signore degli Anelli",
+    "author": "Tolkien",
+    "pages": 1400,
+    "publishedYear": 1950,
+    "isbn": 8657,
+    "quantity": 1,
+    "genre": "Fantasy",
+    "publisher": "Bonpani"
+  },
+  {
+    "title": "Onyx storm",
+    "author": "Rebecca Yarros",
+    "pages": 640,
+    "publishedYear": 2025,
+    "isbn": 1234,
+    "quantity": 3,
+    "genre": "Fantasy",
+    "publisher": "Sperling & Kupfer"
+  },
+  {
+    "title": "Iron Flame",
+    "author": "Rebecca Yarros",
+    "pages": 672,
+    "publishedYear": 2025,
+    "isbn": 6546,
+    "quantity": 2,
+    "genre": "Avventura",
+    "publisher": "Bonpani"
+  },
+  {
+    "title": "One Piece",
+    "author": "Eiichiro Oda",
+    "pages": 78,
+    "publishedYear": 1995,
+    "isbn": 3243,
+    "quantity": 1,
+    "publisher": "Star Comics",
+    "color": false,
+    "type": "Manga",
+    "volume": 1
+  },
+  {
+    "title": "Solo Leveling",
+    "author": "Chugong",
+    "pages": 140,
+    "publishedYear": 2020,
+    "isbn": 2345,
+    "quantity": 3,
+    "publisher": "Star Comics",
+    "color": true,
+    "type": "Manwha",
+    "volume": 1
+  },
+  {
+    "title": "One Piece",
+    "author": "Eiichiro Oda",
+    "pages": 78,
+    "publishedYear": 1995,
+    "isbn": 6453,
+    "quantity": 1,
+    "publisher": "Star Comics",
+    "color": false,
+    "type": "Manga",
+    "volume": 2
+  }
+]
