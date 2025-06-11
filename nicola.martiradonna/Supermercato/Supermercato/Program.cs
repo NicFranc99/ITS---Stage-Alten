@@ -3,38 +3,12 @@ using Supermercato;
 
 Prodotto prodotto = new Prodotto();
 
-Prodotto nutella = new Prodotto()
-{
-    NomeProdotto = "Nutella",
-    PrezzoProdotto = 4.50,
-    TipoProdotto = Prodotto.Tipo.Dolce,
-    Quantita = 2
+Prodotto nutella = new Prodotto("Nutella", 4.50, Prodotto.Tipo.Dolce, 2);
+Prodotto latteGranarolo = new Prodotto("Latte Granarolo", 3.50, Prodotto.Tipo.Altro, 3);
+Prodotto cartaIgenicaScottex = new Prodotto("Carta Igenica Scottex", 2.00, Prodotto.Tipo.Altro, 2);
+Prodotto pennetteBarilla = new Prodotto("Pennette Barilla", 1.20, Prodotto.Tipo.Salato, 5);
 
-};
 
-Prodotto latteGranarolo = new Prodotto()
-{
-    NomeProdotto = "Latte Granarolo",
-    PrezzoProdotto = 3.50,
-    TipoProdotto = Prodotto.Tipo.Altro,
-    Quantita = 3
-};
-
-Prodotto cartaIgenicaScottex = new Prodotto()
-{
-    NomeProdotto = "Carta Igenica Scottex",
-    PrezzoProdotto = 2.00,
-    TipoProdotto = Prodotto.Tipo.Altro,
-    Quantita = 2
-};
-
-Prodotto pennetteBarilla = new Prodotto()
-{
-    NomeProdotto = "Pennette Barilla",
-    TipoProdotto = Prodotto.Tipo.Salato,
-    PrezzoProdotto = 1.20,
-    Quantita = 5
-};
 
 Magazzino magazzino = new Magazzino();
 magazzino.CaricaMagazzino(nutella, latteGranarolo, cartaIgenicaScottex, pennetteBarilla);
@@ -91,7 +65,19 @@ do
 
 
         case 3:
+            Console.WriteLine("Inserisci il nome del prodotto");
+            string nomeProdotto=Console.ReadLine();
 
+            Console.WriteLine("Inserisci il prezzo");
+            double prezzo = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Inserisci la quantità");
+            int quantita = Convert.ToInt32(Console.ReadLine());
+
+            Prodotto prodottoNuovo = new Prodotto(nomeProdotto,prezzo,quantita,Prodotto.Tipo.Salato);
+            prodottoNuovo.QuantitaProdottoSalvata = 100;
+
+            Console.WriteLine($"{prodottoNuovo.NomeProdotto} {prodottoNuovo.PrezzoProdotto} {prodottoNuovo.Quantita} {prodottoNuovo.TipoProdotto} {prodottoNuovo.QuantitaProdottoSalvata}");
 
             //var ProdottiOrdinatiPrezzo = ListaProdotti.Where(l=> l.PrezzoProdotto>1.20).Select(l => l.NomeProdotto);
 
@@ -106,7 +92,6 @@ do
             //{
             //    Console.WriteLine(prodotti);
             //}
-
 
             break;
         case 4:

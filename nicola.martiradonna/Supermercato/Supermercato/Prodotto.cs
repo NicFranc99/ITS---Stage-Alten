@@ -20,10 +20,34 @@ namespace Supermercato
 
         public Tipo TipoProdotto { get; set; }
         public int Quantita { get; set; }
+      
+       
 
         public int QuantitaProdottoSalvata = 0;
 
+        public Prodotto(string NomeProdotto, double PrezzoProdotto, Tipo TipoProdotto, int Quantita)
+        {
+            this.NomeProdotto = NomeProdotto;
+            this.PrezzoProdotto = PrezzoProdotto;
+            this.TipoProdotto = TipoProdotto;
+            this.Quantita = Quantita;
+        }
 
+        public Prodotto(string NomeProdotto,double PrezzoProdotto,int Quantita,Tipo TipoProdotto)
+        {
+            this.NomeProdotto= NomeProdotto;
+            this.PrezzoProdotto= PrezzoProdotto;
+            this.Quantita=Quantita;
+            this.TipoProdotto=TipoProdotto;
+        }
+
+       
+        
+
+        public Prodotto()
+        {
+
+        }
 
         public void StampaProdotti(List<Prodotto> ListaProdotti)
         {
@@ -37,7 +61,7 @@ namespace Supermercato
         }
         public override string ToString()
         {
-            return $"{NomeProdotto} \t{PrezzoProdotto} euro \t Quantità {Quantita} \t TipoProdotto {TipoProdotto}";
+            return $"{NomeProdotto}\t{PrezzoProdotto} euro \t Quantità {Quantita}\t TipoProdotto {TipoProdotto}";
 
         }
 
