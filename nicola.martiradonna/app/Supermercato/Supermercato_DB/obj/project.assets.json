@@ -1833,11 +1833,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nmartiradonna\\Desktop\\repo\\ITS---Stage-Alten\\nicola.martiradonna\\Supermercato_DB\\Supermercato_DB\\Supermercato_DB\\Supermercato_DB.csproj",
+      "projectUniqueName": "C:\\Users\\nmartiradonna\\Desktop\\repo\\ITS---Stage-Alten\\nicola.martiradonna\\app\\Supermercato\\Supermercato_DB\\Supermercato_DB.csproj",
       "projectName": "Supermercato_DB",
-      "projectPath": "C:\\Users\\nmartiradonna\\Desktop\\repo\\ITS---Stage-Alten\\nicola.martiradonna\\Supermercato_DB\\Supermercato_DB\\Supermercato_DB\\Supermercato_DB.csproj",
+      "projectPath": "C:\\Users\\nmartiradonna\\Desktop\\repo\\ITS---Stage-Alten\\nicola.martiradonna\\app\\Supermercato\\Supermercato_DB\\Supermercato_DB.csproj",
       "packagesPath": "C:\\Users\\nmartiradonna\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nmartiradonna\\Desktop\\repo\\ITS---Stage-Alten\\nicola.martiradonna\\Supermercato_DB\\Supermercato_DB\\Supermercato_DB\\obj\\",
+      "outputPath": "C:\\Users\\nmartiradonna\\Desktop\\repo\\ITS---Stage-Alten\\nicola.martiradonna\\app\\Supermercato\\Supermercato_DB\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
