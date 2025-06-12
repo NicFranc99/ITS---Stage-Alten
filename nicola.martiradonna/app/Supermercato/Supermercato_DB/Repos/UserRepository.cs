@@ -26,6 +26,7 @@ namespace Supermercato_DB.Repos
 
                         var reader = command.ExecuteReader();
 
+
                         while (reader.Read())
                         {
                             Console.WriteLine($"Username :{reader.GetString(0)} Password : {reader.GetString(1)}");
