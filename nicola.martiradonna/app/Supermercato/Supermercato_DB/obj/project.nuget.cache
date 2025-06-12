@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3OOE8W6PVAc=",
+  "dgSpecHash": "WYbO3bCXPEg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\nmartiradonna\\Desktop\\repo\\ITS---Stage-Alten\\nicola.martiradonna\\Supermercato_DB\\Supermercato_DB\\Supermercato_DB\\Supermercato_DB.csproj",
+  "projectFilePath": "C:\\Users\\nmartiradonna\\Desktop\\repo\\ITS---Stage-Alten\\nicola.martiradonna\\app\\Supermercato\\Supermercato_DB\\Supermercato_DB.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nmartiradonna\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\nmartiradonna\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

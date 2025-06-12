@@ -13,13 +13,14 @@ namespace Supermercato_DB.Repos
         readonly string _connectionstring = @"Server=tcp:its-alen-bari.database.windows.net,1433;Initial Catalog=its-alten-bari;Persist Security Info=False;User ID=nicola.francavilla;Password=2Vm&aic&AMo-#pxL;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=True;Connection Timeout=30;";
         public bool GetUser(User user)
         {
-            string query = "SELECT Username,Password FROM Users WHERE Username=@username AND Password =@password";
+            string query = "SELECT Username,Password FROM Users WHERE username=@username AND password =@password";
             try
             {
                 using (SqlConnection connection = new SqlConnection(_connectionstring))
                 {
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
+                        connection.Open();
                         command.Parameters.AddWithValue("username", user.Username);
                         command.Parameters.AddWithValue("password", user.Password);
 

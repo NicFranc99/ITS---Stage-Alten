@@ -8,11 +8,13 @@ User user = new User();
 
 do
 {
-    Console.WriteLine("\nInserimento credenziali Utente\n");
+    do
+    {
+        Console.WriteLine("\nInserimento credenziali Utente\n");
 
-} while (user.InserisciCredenziali() == false);
+    } while (user.InserisciCredenziali() == false);
 
-do
-{
+
     Console.WriteLine("Ricerca dell' utente nel DB");
+
 } while (databaseUser.GetUser(user) == false);
