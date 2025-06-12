@@ -1,0 +1,23 @@
+CREATE SCHEMA barber;
+create table barber.clienti (
+id int not null,
+first_name varchar(200) not null,
+last_name varchar(200) not null);
+
+CREATE SCHEMA market;
+create table market.clienti (
+id int not null,
+first_name varchar(200) not null,
+last_name varchar(200) not null);
+
+
+
+
+CREATE TABLE dbo.users(
+id INT IDENTITY(1,1) PRIMARY KEY,
+username VARCHAR(50) NOT NULL,
+password varchar(50) NOT NULL
+);
+
+INSERT INTO users (username, password)
+VALUES ('gabriele', 'Password1.'), ('Nicola', 'Password2.');
