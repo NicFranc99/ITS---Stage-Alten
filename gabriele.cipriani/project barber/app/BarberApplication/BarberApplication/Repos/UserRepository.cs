@@ -4,9 +4,9 @@ using Microsoft.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Supermercato_DB.Interfaces;
+using BarberApplication.Interfaces;
 
-namespace Supermercato_DB.Repos
+namespace BarberApplication.Repos
 {
     public class UserRepository : IUserRepository
     {

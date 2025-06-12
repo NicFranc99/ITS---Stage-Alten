@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace BarberApplication.Interfaces
 {
-    public interface IUserRepository
+    internal interface IClientRepository
     {
-        bool GetUser(User user);
-
     }
 }
