@@ -2,10 +2,12 @@
 using Supermercato_DB.Interfaces;
 using Supermercato_DB.Repos;
 
-IUserRepository databaseUser = new UserRepository();
+IUserRepository userRepository = new UserRepository();
+
 
 User user = new User();
-
+Supermercato supermercato = new Supermercato();
+// INSERIMENTO CREDENZIALI CON CONTROLLO SE SONO NULL O NON SONO PRESENTI NEL DB
 do
 {
     do
@@ -14,7 +16,26 @@ do
 
     } while (user.InserisciCredenziali() == false);
 
+    Console.WriteLine("\nRicerca dell' utente nel DB\n");
 
-    Console.WriteLine("Ricerca dell' utente nel DB");
+} while (userRepository.GetUser(user) == false);
 
-} while (databaseUser.GetUser(user) == false);
+
+
+Console.WriteLine("\n\n  BENVENUTO NEL SUPERMERCATO  ");
+
+IProductRepository productRepository = new ProductRepository();
+
+
+bool permanenza = true;
+
+//MENU PRINCIPALE
+do
+{
+    
+} while (supermercato.Menu(permanenza, productRepository, userRepository)==true);
+
+
+
+
+

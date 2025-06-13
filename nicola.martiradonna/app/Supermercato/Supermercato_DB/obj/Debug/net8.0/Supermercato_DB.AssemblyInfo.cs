@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Supermercato_DB")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+935d2046dc533880a2d6aeefe138af9a540ad890")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+96a734ce4ef9de6a571c45638aad9b025b97a78f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Supermercato_DB")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Supermercato_DB")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
