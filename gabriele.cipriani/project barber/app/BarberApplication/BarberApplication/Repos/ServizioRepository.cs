@@ -3,17 +3,13 @@ using Microsoft.Data.SqlClient;
 
 namespace BarberApplication.Repos
 {
-    public class CustomerRepository : IDatabaseClient
+    public class ServizioRepository : IDatabaseServizio
     {
-
-
         readonly string _connectionstring = @"Server=tcp:its-alen-bari.database.windows.net,1433;Initial Catalog=its-alten-bari;Persist Security Info=False;User ID=nicola.francavilla;Password=2Vm&aic&AMo-#pxL;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=True;Connection Timeout=30;";
 
-
-
-        public bool CreateNewClient(Client client)
+        public bool CreateNewServizio(Servizio servizio)
         {
-            string query = @"INSERT INTO barber.clienti  (FirstName, LastName, Age, Email, PhoneNumber) VALUES(@FirstName,@LastName, @Age,@Email, @PhoneNumber)";
+            string query = @"INSERT INTO barber.servizi (ServiceName, ServicePrice) VALUES (@ServiceName, @ServicePrice)";
 
             try
             {
@@ -25,11 +21,9 @@ namespace BarberApplication.Repos
                     using (SqlCommand sqlCommand = new SqlCommand(query, connection))
                     {
 
-                        sqlCommand.Parameters.Add(new SqlParameter("FirstName", client.FirstName));
-                        sqlCommand.Parameters.Add(new SqlParameter("LastName", client.LastName));
-                        sqlCommand.Parameters.Add(new SqlParameter("Age", client.Age));
-                        sqlCommand.Parameters.Add(new SqlParameter("Email", client.Email));
-                        sqlCommand.Parameters.Add(new SqlParameter("PhoneNumber", client.PhoneNumber));
+                        sqlCommand.Parameters.Add(new SqlParameter("ServiceName", servizio.ServiceName));
+                        sqlCommand.Parameters.Add(new SqlParameter("ServicePrice", servizio.ServicePrice));
+                       
 
                         sqlCommand.ExecuteNonQuery();
                         return true;
@@ -48,38 +42,43 @@ namespace BarberApplication.Repos
 
 
         }
+        
 
-
-        public bool DeleteClientByID(int idTastiera)
+        public bool DeleteServizioByID(int idServizio)
         {
-            string query = @"DELETE FROM barber.clienti WHERE Id = @Id";
+            string query = @"DELETE  FROM barber.servizi  WHERE Id=@Id";
 
             try
             {
+
                 using (SqlConnection connection = new SqlConnection(_connectionstring))
                 {
                     connection.Open();
                     using (SqlCommand sqlCommand = new SqlCommand(query, connection))
                     {
-                        sqlCommand.Parameters.Add(new SqlParameter("@Id", idTastiera));
-                        int rowsAffected = sqlCommand.ExecuteNonQuery();
-                        
-                        return rowsAffected > 0;
+                        sqlCommand.Parameters.Add(new SqlParameter("Id", idServizio));
+                        sqlCommand.ExecuteNonQuery();
+                        return true;
+
+
+
                     }
+
                 }
+
+
+
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Errore di connessione al database: " + ex.Message);
+                Console.WriteLine("Errore di connessione al database");
                 return false;
             }
         }
 
-
-
-        public bool GetAllClient()
+        public bool GetAllServizi()
         {
-            string query = @"SELECT * FROM  barber.clienti";
+            string query = @"SELECT * FROM  barber.servizi";
 
             try
             {
@@ -94,7 +93,7 @@ namespace BarberApplication.Repos
                         sqlCommand.ExecuteReader();
                         while (reader.Read())
                         {
-                            Console.WriteLine($" Id:{reader["Id"]}\n Nome:{reader["FirstName"]}\n Cognome:{reader["LastName"]}\n Età:{reader["Age"]}\n Email:{reader["Email"]}\n Numero di Telefono:{reader["PhoneNumber"]}");
+                            Console.WriteLine($" Id:{reader["Id"]}\n Servizio:{reader["ServiceName"]}\n Prezzo:{reader["ServicePrice"]} euro \n ");
                         }
 
 
@@ -114,9 +113,9 @@ namespace BarberApplication.Repos
 
         }
 
-        public bool GetClientByID(int idTastiera)
+        public bool GetServizioByID(int idServizio)
         {
-            string query = @"SELECT * FROM barber.clienti WHERE Id=@Id";
+            string query = @"SELECT * FROM barber.servizi WHERE Id=@Id";
 
             try
             {
@@ -126,11 +125,11 @@ namespace BarberApplication.Repos
                     connection.Open();
                     using (SqlCommand sqlCommand = new SqlCommand(query, connection))
                     {
-                        sqlCommand.Parameters.Add(new SqlParameter("Id", idTastiera));
+                        sqlCommand.Parameters.Add(new SqlParameter("Id", idServizio));
                         using SqlDataReader reader = sqlCommand.ExecuteReader();
                         while (reader.Read())
                         {
-                            Console.WriteLine($" Id:{reader["Id"]}\n Nome:{reader["FirstName"]}\n Cognome:{reader["LastName"]}\n Età:{reader["Age"]}\n Email:{reader["Email"]}\n Numero di Telefono:{reader["PhoneNumber"]}");
+                            Console.WriteLine($" Id:{reader["Id"]}\n Servizio:{reader["ServiceName"]}\n Prezzo:{reader["ServicePrice"]} euro\n");
                         }
 
 
@@ -150,9 +149,9 @@ namespace BarberApplication.Repos
 
         }
 
-        public bool UpdateClientByID(int idTastiera, Client client)
+        public bool UpdateServizioByID(int idServizio, Servizio servizio)
         {
-            string query = @"UPDATE barber.clienti SET FirstName=@FirstName, LastName=@LastName, Age=@Age, Email=@Email, PhoneNumber=@PhoneNumber WHERE Id=@idTastiera";
+            string query = @"UPDATE barber.servizi SET ServiceName=@ServiceName, ServicePrice=@ServicePrice";
 
             try
             {
@@ -163,12 +162,10 @@ namespace BarberApplication.Repos
 
                     using (SqlCommand sqlCommand = new SqlCommand(query, connection))
                     {
-                        sqlCommand.Parameters.Add(new SqlParameter("idTastiera", idTastiera)); 
-                        sqlCommand.Parameters.Add(new SqlParameter("FirstName", client.FirstName));
-                        sqlCommand.Parameters.Add(new SqlParameter("LastName", client.LastName));
-                        sqlCommand.Parameters.Add(new SqlParameter("Age", client.Age));
-                        sqlCommand.Parameters.Add(new SqlParameter("Email", client.Email));
-                        sqlCommand.Parameters.Add(new SqlParameter("PhoneNumber", client.PhoneNumber));
+                        sqlCommand.Parameters.Add(new SqlParameter("idTastiera", idServizio));
+                        sqlCommand.Parameters.Add(new SqlParameter("ServiceName", servizio.ServiceName));
+                        sqlCommand.Parameters.Add(new SqlParameter("ServicePrice", servizio.ServicePrice));
+                     
 
                         sqlCommand.ExecuteNonQuery();
                         return true;
@@ -185,7 +182,5 @@ namespace BarberApplication.Repos
                 return false;
             }
         }
-
     }
 }
-

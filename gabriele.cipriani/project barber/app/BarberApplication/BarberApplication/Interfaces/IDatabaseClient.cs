@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BarberApplication
+namespace BarberApplication.Interfaces
 {
     internal interface IDatabaseClient
     {
@@ -13,6 +13,7 @@ namespace BarberApplication
         public bool GetAllClient();
         public bool GetClientByID(int idTastiera);
         public bool DeleteClientByID(int idTastiera);
-        //public bool UpdateClientByID();
+        public bool UpdateClientByID(int idTastiera, Client client);
+       
     }
 }
