@@ -10,5 +10,7 @@ namespace Supermercato_DB.Interfaces
     {
         bool GetUser(User user);
 
+      
+
     }
 }
