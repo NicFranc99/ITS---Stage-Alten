@@ -20,6 +20,14 @@ Client client = new Client();
 //} while (databaseUser.GetUser(user) == false);  
 
 //Client.CreateClient();
-//Client.DeleteClient();
+//Client.CreateClient();
+Client.DeleteClient();
 //Client.GetAllClients();
-Client.GetClientsByID();
+//Client.GetClientsByID();
+//Client.UpdateClientsByID();
+
+//Servizio.CreateServizio();
+//Servizio.DeleteServizio();
+//Servizio.GetAllServizi();
+//Servizio.GetServiziById();
+//Servizio.UpdateServiziById();
