@@ -1,0 +1,14 @@
+--GetAllProducts
+SELECT Id,Nome,Prezzo,Quantita FROM market.prodotti;
+
+--CreateNewProduct
+INSERT INTO market.prodotti (Nome,Prezzo,Quantita)\r\nVALUES(@nome,@prezzo,@quantita);
+
+--GetAllProductsById
+SELECT Id,Nome,Prezzo,Quantita FROM market.prodotti WHERE Id=@id;
+
+--IsProductQuantityAvaible
+SELECT Nome,Quantita FROM market.prodotti WHERE @quantita<=Quantita AND Id=@id;
+
+--UpdateProductQuantity
+UPDATE market.prodotti SET Quantita=(Quantita-@quantita) WHERE Id= @id;
