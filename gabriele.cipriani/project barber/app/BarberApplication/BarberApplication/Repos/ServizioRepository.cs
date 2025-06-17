@@ -1,4 +1,5 @@
-﻿using BarberApplication.Interfaces;
+﻿using BarberApplication.@class;
+using BarberApplication.Interfaces;
 using Microsoft.Data.SqlClient;
 
 namespace BarberApplication.Repos
@@ -57,8 +58,13 @@ namespace BarberApplication.Repos
                     using (SqlCommand sqlCommand = new SqlCommand(query, connection))
                     {
                         sqlCommand.Parameters.Add(new SqlParameter("Id", idServizio));
-                        sqlCommand.ExecuteNonQuery();
-                        return true;
+
+                        var rowsAffected=sqlCommand.ExecuteNonQuery();
+                        if (rowsAffected>0)
+                        {
+                            return true;
+                        }
+                        return false;
 
 
 
@@ -130,6 +136,11 @@ namespace BarberApplication.Repos
                         while (reader.Read())
                         {
                             Console.WriteLine($" Id:{reader["Id"]}\n Servizio:{reader["ServiceName"]}\n Prezzo:{reader["ServicePrice"]} euro\n");
+                        }
+                        if(!reader.HasRows)
+                        {
+                            
+                            return false;
                         }
 
 

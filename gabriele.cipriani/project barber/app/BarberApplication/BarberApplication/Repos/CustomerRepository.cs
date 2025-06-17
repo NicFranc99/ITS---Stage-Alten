@@ -1,9 +1,10 @@
-﻿using BarberApplication.Interfaces;
+﻿using BarberApplication.@class;
+using BarberApplication.Interfaces;
 using Microsoft.Data.SqlClient;
 
 namespace BarberApplication.Repos
 {
-    public class CustomerRepository : IDatabaseClient
+    public class ClientRepository : IDatabaseClient
     {
 
 
@@ -132,7 +133,10 @@ namespace BarberApplication.Repos
                         {
                             Console.WriteLine($" Id:{reader["Id"]}\n Nome:{reader["FirstName"]}\n Cognome:{reader["LastName"]}\n Età:{reader["Age"]}\n Email:{reader["Email"]}\n Numero di Telefono:{reader["PhoneNumber"]}");
                         }
-
+                        if (!reader.HasRows)
+                        {
+                            return false;
+                        }
 
                         return true;
                     }
