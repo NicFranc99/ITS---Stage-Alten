@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BarberApplication.@class;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,6 +7,10 @@ using System.Threading.Tasks;
 
 namespace BarberApplication.Interfaces
 {
+    //cambia nome dei repository
+    //trasformare i metodi statici
+    //non istanziare repos nei metodi ma creare la proprietà nella classe
+    //
     internal interface IDatabaseClient
     {
         

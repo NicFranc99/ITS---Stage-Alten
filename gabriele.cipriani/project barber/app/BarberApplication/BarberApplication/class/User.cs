@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BarberApplication
+namespace BarberApplication.@class
 {
     public class User
     {
@@ -25,7 +25,7 @@ namespace BarberApplication
                 Password = Console.ReadLine();
 
                 
-            if(Username=="" || Password == "")
+            if(string.IsNullOrWhiteSpace(Username) || string.IsNullOrWhiteSpace(Password))
             {
                 Console.WriteLine("!!  Errore credenziali  !!");
                 return false;

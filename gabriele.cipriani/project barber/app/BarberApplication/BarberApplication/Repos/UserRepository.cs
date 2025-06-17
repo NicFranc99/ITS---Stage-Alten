@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BarberApplication.Interfaces;
+using BarberApplication.@class;
 
 namespace BarberApplication.Repos
 {
