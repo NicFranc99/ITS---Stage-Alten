@@ -35,12 +35,16 @@ namespace Supermercato_DB
                 switch (sceltaUtente)
                 {
                     case 1:
+                        //INSERISCE UN NUOVO PRODOTTO NEL CARRELLLO
                         InserisciProdottoNelCarrello(productRepository);
                         break;
                     case 2:
+                        //CALCOLA IL TOTALE DELLO SCONTRINO
                         CalcolaTotale();
+
                         break;
                     case 3:
+
                         Console.WriteLine("\n Scontrino terminato  ");
                         return false;
 
@@ -57,10 +61,11 @@ namespace Supermercato_DB
            
             int QuantitàTastiera = 0;
             int IdProdottoCarrello = 0;
+            
+                //FUNZIONE PER VERIFICARE SE L'ID INSERITO DA TASTIERA CORRISPONDE AD UN PRODOTTO PRESENTE NEL DB
+                 IdProdottoCarrello= VerificaIdProdottoDB(productRepository);
             do
             {
-                 IdProdottoCarrello= VerificaIdProdottoDB(productRepository);
-                
                 do
                 {
 
@@ -71,14 +76,19 @@ namespace Supermercato_DB
                     }
                     catch (FormatException)
                     {
-                        Console.WriteLine("Quantità non valida");
+                        do
+                        {
+                            Console.WriteLine("Quantità non valida");
+                            Console.WriteLine("Inserisci la quantità del prodotto");
+                            QuantitàTastiera = Convert.ToInt32(Console.ReadLine());
+                        } while (QuantitàTastiera <= 0 || QuantitàTastiera is string);
                     }
 
                 } while (QuantitàTastiera <= 0 || QuantitàTastiera is string);
 
                 
 
-
+                //SE LA QUANTITA' INSERITA NON E' DISPONIBILE PER QUEL PRODOTTO FA REINSERIRE LA QUANTITA'
             } while (!productRepository.IsProductQuantityAvaible(IdProdottoCarrello, QuantitàTastiera));
             
             //AGGIORNA LA QUANTITA' SUL DB 
@@ -105,7 +115,7 @@ namespace Supermercato_DB
                 {
                     try
                     {
-                        Console.WriteLine("\nInserisci l' ID prodotto da inserire nel carrello: ");
+                        Console.WriteLine("\nInserisci l' ID del prodotto da inserire nel carrello: ");
                         IdProdottoCarrello = Convert.ToInt32(Console.ReadLine());
                     }
                     catch (FormatException)
@@ -121,7 +131,7 @@ namespace Supermercato_DB
 
         public void CalcolaTotale()
         {
-            var ProdottiListaSpesa = ListaSpesa.Select(prodotto => $"{prodotto.Nome} {String.Format("{0:0.00}", prodotto.Prezzo)} Euro ").ToList();
+            var ProdottiListaSpesa = ListaSpesa.Select(prodotto => $"{prodotto.Nome} {String.Format("{0:0.00}", prodotto.Prezzo)} euro ").ToList();
             var Totale = ListaSpesa.Sum(prodotto => prodotto.Prezzo);
 
             foreach (var prodotti in ProdottiListaSpesa)
@@ -130,7 +140,7 @@ namespace Supermercato_DB
 
             }
             Console.WriteLine("\n---------------------------------------\n");
-            Console.WriteLine($"Il Totale è: {String.Format("{0:0.00}", Totale)} Euro");
+            Console.WriteLine($"Il Totale è: {String.Format("{0:0.00}", Totale)} euro");
         }
     }
 }

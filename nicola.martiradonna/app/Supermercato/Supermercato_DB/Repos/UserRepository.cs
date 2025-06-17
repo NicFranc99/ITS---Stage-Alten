@@ -29,7 +29,8 @@ namespace Supermercato_DB.Repos
 
                         while (reader.Read())
                         {
-                            Console.WriteLine($"Username :{reader.GetString(0)} Password : {reader.GetString(1)}");
+                            Console.WriteLine("Utente:\n");
+                            Console.WriteLine($"Username: {reader.GetString(0)} Password: {reader.GetString(1)}");
                         }
 
                         if (!reader.HasRows)

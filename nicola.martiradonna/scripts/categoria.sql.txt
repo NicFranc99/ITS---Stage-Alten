@@ -1,0 +1,5 @@
+--GetProductsDescription
+SELECT Id,Descrizione FROM market.categoria;
+
+--GetProductDescriptionById
+SELECT Id,Descrizione FROM market.categoria WHERE Id=@id;

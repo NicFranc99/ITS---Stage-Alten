@@ -5,16 +5,28 @@ using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 using Supermercato_DB.Interfaces;
+using Supermercato_DB.Services;
 
 namespace Supermercato_DB
 {
     public class Supermercato
     {
-        public int sceltaUtente { get; set; }
+        public int SceltaUtente { get; set; }
+
+        private readonly IProductRepository productRepository;
+
+        private readonly IProductService productService;
+
+        private readonly ICategoryRepository categoryRepository;
 
 
-
-        public bool Menu(bool permanenza, IProductRepository productRepository, IUserRepository userRepository)
+        public Supermercato(IProductRepository ProductRepository, IProductService ProductService, ICategoryRepository CategoryRepository)
+        {
+            productRepository = ProductRepository;
+            productService = ProductService;
+            categoryRepository = CategoryRepository;
+        }
+        public bool Menu(bool permanenza)
         {
             do
             {
@@ -22,17 +34,17 @@ namespace Supermercato_DB
                 {
                     Console.WriteLine("\nSeleziona l' operazione che vuoi eseguire");
                     Console.WriteLine("\n1) Seleziona tutti i prodotti presenti nel magazzino\n2) Crea uno scontrino\n3) Inserisci un nuovo prodotto nel Magazzino\n4) Chiusura Programma");
-                    sceltaUtente = Convert.ToInt32(Console.ReadLine());
+                    SceltaUtente = Convert.ToInt32(Console.ReadLine());
                 }
                 catch (FormatException)
                 {
                     Console.WriteLine("\n!!  Formato sbagliato  !!");
                 }
 
-            } while (!(sceltaUtente is int) && sceltaUtente < 0 || sceltaUtente > 4);
+            } while (!(SceltaUtente is int) && SceltaUtente < 0 || SceltaUtente > 4);
 
 
-            switch (sceltaUtente)
+            switch (SceltaUtente)
             {
                 case 1:
                     productRepository.GetAllProducts();
@@ -40,6 +52,8 @@ namespace Supermercato_DB
 
                 case 2:
                     Scontrino scontrino = new Scontrino();
+                    Console.WriteLine("\nNUOVO SCONTRINO");
+
                     do
                     {
 
@@ -53,10 +67,14 @@ namespace Supermercato_DB
 
                     do
                     {
+                      
+                    } while (!productService.AddProduct(product));
 
-                    } while (!product.InserisciNuovoProdotto());
+                    //ASSEGNA LA DESCRIZIONE TRAMITE ID AL PRODOTTO
+                    int IdDescription= productService.AddProductDescription(product,categoryRepository);
 
-                    productRepository.CreateNewProduct(product);
+                    //INSERISCE IL NUOVO PRODOTTO NEL DB CON L'ID DELLA CATEGORIA ASSEGNATO IN PRECEDENZA
+                    productRepository.CreateNewProduct(product,IdDescription);
 
                     break;
                 case 4:

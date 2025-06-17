@@ -25,16 +25,15 @@ namespace Supermercato_DB
                 Password = Console.ReadLine();
 
                 
-            if(Username=="" || Password == "")
+            if(string.IsNullOrWhiteSpace(Username) || string.IsNullOrWhiteSpace(Password))
             {
                 Console.WriteLine("!!  Errore credenziali  !!");
                 return false;
             }
-            else
-            {
+            
                 Console.WriteLine("Credenziali OK");
                 return true;
-            }
+            
         }
 
     }

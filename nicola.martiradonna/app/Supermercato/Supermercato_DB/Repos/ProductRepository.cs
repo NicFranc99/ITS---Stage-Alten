@@ -17,7 +17,9 @@ namespace Supermercato_DB.Repos
 
         public bool GetAllProducts()
         {
-            string query = "SELECT Id,Nome,Prezzo,Quantita FROM market.prodotti";
+            string query = @"SELECT market.prodotti.Id,Nome,Prezzo,Descrizione,Quantita 
+                             FROM market.prodotti 
+                             JOIN market.categoria on Id_Categoria = market.categoria.Id";
 
             try
             {
@@ -32,7 +34,7 @@ namespace Supermercato_DB.Repos
                         while (reader.Read())
                         {
                             Console.WriteLine("\nProdotto:");
-                            Console.WriteLine($"Id: {reader.GetInt64(0)} Nome: {reader.GetString(1)} Prezzo: {reader.GetDecimal(2)} Quantità: {reader.GetInt32(3)}");
+                            Console.WriteLine($"Id: {reader.GetInt64(0)} Nome: {reader.GetString(1)} Prezzo: {reader.GetDecimal(2)} Descrizione: {reader.GetString(3)} Quantità: {reader.GetInt32(4)}");
                         }
                         if (!reader.HasRows)
                         {
@@ -51,9 +53,10 @@ namespace Supermercato_DB.Repos
             }
         }
 
-        public bool CreateNewProduct(Product product)
+        public bool CreateNewProduct(Product product,int IdDescription)
         {
-            string query = "INSERT INTO market.prodotti (Nome,Prezzo,Quantita)\r\nVALUES(@nome,@prezzo,@quantita);";
+            string query = @"INSERT INTO market.prodotti (Nome,Prezzo,Quantita,Id_Categoria) 
+                             VALUES(@nome,@prezzo,@quantita,@idDescription);";
 
             try
             {
@@ -65,6 +68,7 @@ namespace Supermercato_DB.Repos
                         command.Parameters.AddWithValue("nome", product.Nome);
                         command.Parameters.AddWithValue("prezzo", product.Prezzo);
                         command.Parameters.AddWithValue("quantita", product.Quantita);
+                        command.Parameters.AddWithValue("idDescription", IdDescription);
 
                         var rowsAffected = command.ExecuteNonQuery();
 
@@ -90,7 +94,10 @@ namespace Supermercato_DB.Repos
 
         public bool GetProductById(int id)
         {
-            string query = "SELECT Id,Nome,Prezzo,Quantita FROM market.prodotti WHERE Id=@id";
+            string query = @"SELECT market.prodotti.Id,Nome,Prezzo,Descrizione,Quantita
+                           FROM market.prodotti 
+                           JOIN market.categoria on Id_Categoria = market.categoria.Id  
+                           WHERE market.prodotti.Id=@id";
             try
             {
 
@@ -107,7 +114,7 @@ namespace Supermercato_DB.Repos
                         while (reader.Read())
                         {
                             Console.WriteLine("\nProdotto trovato: \n");
-                            Console.WriteLine($"Id: {reader.GetInt64(0)} Nome: {reader.GetString(1)} Prezzo: {reader.GetDecimal(2)} Quantità: {reader.GetInt32(3)}");
+                            Console.WriteLine($"Id: {reader.GetInt64(0)} Nome: {reader.GetString(1)} Prezzo: {reader.GetDecimal(2)} Descrizione: {reader.GetString(3)} Quantità: {reader.GetInt32(4)}");
                         }
                         if (!reader.HasRows)
                         {
@@ -127,7 +134,9 @@ namespace Supermercato_DB.Repos
 
         public bool IsProductQuantityAvaible(int id, int quantita)
         {
-            string query = "SELECT Nome,Quantita FROM market.prodotti WHERE @quantita<=Quantita AND Id=@id";
+            string query = @"SELECT Nome,Quantita 
+                             FROM market.prodotti 
+                             WHERE @quantita<=Quantita AND Id=@id";
 
 
             try
@@ -163,7 +172,9 @@ namespace Supermercato_DB.Repos
 
         public bool UpdateProductQuantity(int id, int quantita)
         {
-            string query = "UPDATE market.prodotti SET Quantita=(Quantita-@quantita) WHERE Id= @id;";
+            string query = @"UPDATE market.prodotti 
+                             SET Quantita=(Quantita-@quantita) 
+                             WHERE Id= @id";
 
             try
             {
@@ -197,7 +208,9 @@ namespace Supermercato_DB.Repos
 
         public Product AddProductToTheCart(int id, Product prodottoCarrello)
         {
-            string query = "SELECT Nome,Prezzo,Quantita FROM market.prodotti WHERE Id=@id";
+            string query = @"SELECT Nome,Prezzo,Quantita 
+                             FROM market.prodotti 
+                             WHERE Id=@id";
 
             try
             {
@@ -228,5 +241,7 @@ namespace Supermercato_DB.Repos
                 return null;
             }
         }
+
+        
     }
 }
