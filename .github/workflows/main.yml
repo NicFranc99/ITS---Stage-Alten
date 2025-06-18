@@ -1,4 +1,4 @@
-name: Build Parrucchiere 🛠️
+name: Build 🛠️
 
 on:
   workflow_dispatch:
@@ -8,8 +8,12 @@ on:
       - develop
       - feature/*
 
+env:
+  PARRUCCHIERE_SOL_PATH: "gabriele.cipriani/esercizio parrucchiere/esercizio parrucchiere.sln"
+  MARKET_SOL_PATH: "gabriele.cipriani/esercizio parrucchiere/esercizio parrucchiere.sln"
+
 jobs:
-  build:
+  build_parrucchiere:
     runs-on: ubuntu-latest
 
     steps:
@@ -22,7 +26,25 @@ jobs:
           dotnet-version: '8.0.x'
 
       - name: Restore dependencies
-        run: dotnet restore "gabriele.cipriani/esercizio parrucchiere/esercizio parrucchiere.sln"
+        run: dotnet restore ${{ env.PARRUCCHIERE_SOL_PATH }}
 
       - name: Build solution
-        run: dotnet build "gabriele.cipriani/esercizio parrucchiere/esercizio parrucchiere.sln" --configuration Release --no-restore
+        run: dotnet build ${{ env.PARRUCCHIERE_SOL_PATH }} --configuration Release --no-restore
+
+
+  build_market:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restore dependencies
+        run: dotnet restore ${{ env.MARKET_SOL_PATH }}
+
+      - name: Build solution
+        run: dotnet build ${{ env.MARKET_SOL_PATH }} --configuration Release --no-restore
