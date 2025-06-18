@@ -35,111 +35,6 @@ do
 } while (!databaseUser.GetUser(user));
 
 Console.Clear();
-//do
-//{
-//    Console.WriteLine("benvenuto nell'applicazione\n" +
-//        "quale operazione vuoi scegliere?\n" +
-//        "1. Inserimento Clienti\n" +
-//        "2. Eliminazione Clienti\n" +
-//        "3. Recupero Clienti per ID\n" +
-//        "4. Aggiornamento Clienti per ID\n" +
-//        "5. Inserimento Servizi\n" +
-//        "6. Eliminazione Servizi\n" +
-//        "7. Recupero Servizi per ID\n" +
-//        "8. Visualizza tutti i Clienti\n" +
-//        "9. Visualizza tutti i Servizi\n" +
-//        "10. Operazioni sui Servizi\n" +
-//        "0. Esci\n");
-
-//    if (!int.TryParse(Console.ReadLine(), out scelta) || scelta < 0 || scelta > 10)
-//    {
-//        Console.WriteLine("Scelta non valida. Riprova.");
-//        continue;
-//    }
-
-//    switch (scelta)
-//    {
-//        case 1:
-//            Console.WriteLine("Inserimento Clienti");
-//            cliente = ValorizzaClient();
-//            clientUtility.CreateClient(cliente);
-//            break;
-
-//        case 2:
-//            Console.WriteLine("Eliminazione Clienti");
-//            int id;
-//            clientUtility.GetAllClients();
-//            do
-//            {
-//                id = InsertIdForDeleteClient();
-//            } while (!clientUtility.DeleteClient(id));
-//            break;
-
-//        case 3:
-//            Console.WriteLine("Recupero Clienti per ID");
-//            clientUtility.GetAllClients();
-//            do
-//            {
-//                idGet = InsertIdForGetClient();
-//            } while (!clientUtility.GetClientsByID(idGet));
-//            break;
-
-//        case 4:
-//            Console.WriteLine("Aggiornamento Clienti per ID");
-//            clientUtility.GetAllClients();
-//            do
-//            {
-//                idGet = InsertIdForGetClient();
-//                do
-//                {
-//                    cliente = InsertNewDataForUpdatingClient();
-//                } while (cliente == null);
-//            } while (!clientUtility.UpdateClientsByID(idGet, cliente));
-//            break;
-
-//        case 5:
-//            Console.WriteLine("Inserimento Servizi");
-//            servizio = CreaServizio();
-//            servizioUtility.CreateServizio(servizio);
-//            break;
-
-//        case 6:
-//            Console.WriteLine("Eliminazione Servizi");
-//            servizioUtility.GetAllServizio();
-//            do
-//            {
-//                idServizio = InsertIdForDeleteServizio();
-//            } while (!servizioUtility.DeleteServizio(idServizio));
-//            break;
-
-//        case 7:
-//            Console.WriteLine("Recupero Servizi per ID");
-//            servizioUtility.GetAllServizio();
-//            do
-//            {
-//                idServizio = InsertIdForGetServizio();
-//            } while (!servizioUtility.GetServizioByID(idServizio));
-//            break;
-
-//        case 8:
-//            Console.WriteLine("Visualizza tutti i Clienti");
-//            clientUtility.GetAllClients();
-//            break;
-
-//        case 9:
-//            Console.WriteLine("Visualizza tutti i Servizi");
-//            servizioUtility.GetAllServizio();
-//            break;
-//        case 10:
-//            Console.WriteLine("Operazioni sui Servizi");
-//            utility.AvviaOperazioni();
-//            break;
-//        case 0:
-//            Console.WriteLine("Uscita dall'applicazione...");
-//            break;
-//    }
-
-//} while (scelta != 0);
 
 
 int sceltaPrincipale;
@@ -237,11 +132,12 @@ void MostraMenuServizi()
         Console.WriteLine("2. Elimina Servizio");
         Console.WriteLine("3. Recupera Servizio per ID");
         Console.WriteLine("4. Visualizza tutti i Servizi");
+        Console.WriteLine("5. Modifica servizio");
         Console.WriteLine("0. Torna al menu principale");
 
-        while (!int.TryParse(Console.ReadLine(), out scelta) || scelta < 0 || scelta > 4)
+        while (!int.TryParse(Console.ReadLine(), out scelta) || scelta < 0 || scelta > 5)
         {
-            Console.WriteLine("Scelta non valida. Inserisci un numero compreso tra 0 e 4.");
+            Console.WriteLine("Scelta non valida. Inserisci un numero compreso tra 0 e 5.");
         }
 
         switch (scelta)
@@ -263,6 +159,16 @@ void MostraMenuServizi()
                 break;
             case 4:
                 servizioUtility.GetAllServizio();
+                break;
+            case 5:
+                servizioUtility.GetAllServizio();
+                do
+                {
+                    idGet = InsertIdForGetServizio();
+                    do { servizio = InsertNewDataForUpdatingServizio(); }
+                    while (servizio == null);
+                }
+                while (!servizioUtility.UpdateServizioByID(idGet, servizio));
                 break;
         }
 
@@ -351,6 +257,41 @@ int InsertIdForGetServizio()
 }
 
 
+Servizio InsertNewDataForUpdatingServizio()
+{
+    var servizio = new Servizio();
+
+    Console.WriteLine("Inserisci il nuovo nome del servizio (lascia vuoto per impostare NULL):");
+    string inputNome = Console.ReadLine();
+    servizio.ServiceName = string.IsNullOrWhiteSpace(inputNome) ? null : inputNome;
+
+    Console.WriteLine("Inserisci il nuovo prezzo del servizio (lascia vuoto per impostare NULL):");
+    string inputPrice = Console.ReadLine();
+
+    if (string.IsNullOrWhiteSpace(inputPrice))
+    {
+        servizio.ServicePrice = null;
+    }
+    else
+    {
+        decimal parsedPrice;
+        while (!decimal.TryParse(inputPrice, out parsedPrice) || parsedPrice < 0)
+        {
+            Console.WriteLine("Il prezzo inserito non è valido. Riprova (lascia vuoto per impostare NULL):");
+            inputPrice = Console.ReadLine();
+            if (string.IsNullOrWhiteSpace(inputPrice))
+            {
+                parsedPrice = 0;
+                break;
+            }
+        }
+        
+        servizio.ServicePrice = string.IsNullOrWhiteSpace(inputPrice) ? null : parsedPrice;
+    }
+
+    return servizio;
+}
+    
 
 
 Client ValorizzaClient()

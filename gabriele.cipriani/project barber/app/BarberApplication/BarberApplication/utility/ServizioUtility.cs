@@ -3,6 +3,7 @@ using BarberApplication.Interfaces;
 using BarberApplication.Repos;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -71,6 +72,20 @@ namespace BarberApplication.utility
                 Console.WriteLine("Errore nel recupero del servizio.");
                 return false;
             
+        }
+
+        public bool UpdateServizioByID(int idServizio,Servizio servizio)
+        {
+           IDatabaseServizio databaseServizio = new ServizioRepository();
+            if (databaseServizio.UpdateServizioByID(idServizio, servizio))
+            {
+                Console.WriteLine("Servizio aggiornato con successo!");
+                return true;
+            }
+            
+            
+                Console.WriteLine("Errore nell'aggiornamento del servizio.");
+            return false;
         }
     }
 }

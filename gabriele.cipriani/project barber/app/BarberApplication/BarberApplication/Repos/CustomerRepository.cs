@@ -96,6 +96,7 @@ namespace BarberApplication.Repos
                         while (reader.Read())
                         {
                             Console.WriteLine($" Id:{reader["Id"]}\n Nome:{reader["FirstName"]}\n Cognome:{reader["LastName"]}\n Età:{reader["Age"]}\n Email:{reader["Email"]}\n Numero di Telefono:{reader["PhoneNumber"]}");
+                            Console.WriteLine("================================");
                         }
 
 

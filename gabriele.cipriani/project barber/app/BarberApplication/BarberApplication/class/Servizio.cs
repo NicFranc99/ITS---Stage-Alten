@@ -7,7 +7,7 @@ namespace BarberApplication.@class
     {
         public int Id { get; set; }
         public string ServiceName { get; set; }
-        public decimal ServicePrice { get; set; }
+        public decimal? ServicePrice { get; set; }
 
 
         
