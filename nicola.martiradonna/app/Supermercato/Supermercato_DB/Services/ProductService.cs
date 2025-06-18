@@ -219,7 +219,7 @@ namespace Supermercato_DB.Services
 
                         IdProdottoModifica = GetId(mxs);
 
-                    } while (!productRepository.UpdateProductById(prodotto,IdProdottoModifica));
+                    } while (!productRepository.UpdateProductByIdString(prodotto,IdProdottoModifica));
 
 
                     break;
@@ -235,7 +235,7 @@ namespace Supermercato_DB.Services
 
                         IdProdottoModifica = GetId(mxs);
 
-                    } while (!productRepository.UpdateProductById(prodotto,IdProdottoModifica));
+                    } while (!productRepository.UpdateProductByIdString(prodotto,IdProdottoModifica));
 
                     break;
                 case 3:
@@ -256,7 +256,7 @@ namespace Supermercato_DB.Services
                     {
                         IdProdottoModifica = GetId(mxs);
 
-                    } while (!productRepository.UpdateProductById(prodotto,IdProdottoModifica));
+                    } while (!productRepository.UpdateProductByIdString(prodotto,IdProdottoModifica));
 
 
 
@@ -284,7 +284,7 @@ namespace Supermercato_DB.Services
                     {
                         IdProdottoModifica = GetId(mxs);
 
-                    } while (!productRepository.UpdateProductById(prodotto,IdProdottoModifica));
+                    } while (!productRepository.UpdateProductByIdString(prodotto,IdProdottoModifica));
 
                     break;
                 case 5:

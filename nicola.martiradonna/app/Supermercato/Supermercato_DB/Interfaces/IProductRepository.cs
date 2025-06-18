@@ -26,5 +26,7 @@ namespace Supermercato_DB.Interfaces
 
 
         bool UpdateProductById(Product prodotto,int idProdotto);
+
+        bool UpdateProductByIdString(Product prodotto, int idProdotto);
     }
 }
