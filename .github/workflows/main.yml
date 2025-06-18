@@ -22,8 +22,8 @@ jobs:
           dotnet-version: '8.0.x'
 
       - name: Restore
-        run: dotnet restore "./gabriele.cipriani/esercizio parruchiere/esercizio parrucchiere.sln"
+        run: dotnet restore "gabriele.cipriani/esercizio parruchiere/esercizio parrucchiere.sln"
 
 
       - name: Build
-        run: dotnet build "./gabriele.cipriani/esercizio parruchiere/esercizio parrucchiere.sln" --configuration Release --no-restore
+        run: dotnet build "gabriele.cipriani/esercizio parruchiere/esercizio parrucchiere.sln" --configuration Release --no-restore
