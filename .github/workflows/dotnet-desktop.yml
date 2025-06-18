@@ -22,7 +22,12 @@ jobs:
           dotnet-version: ${{ env.DOTNET_VERSION }}
 
       - name: Install dependencies 📂
-        run: dotnet restore WebApi
+        run: |
+          dir
+          dotnet restore WebApi
+          dotnet build WebApi -c Release --no-restore
+          dotnet publish WebApi -c Release --no-build
+            --output '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}'
 
       - name: Build 🧱
         run: dotnet build WebApi --configuration Release --no-restore
