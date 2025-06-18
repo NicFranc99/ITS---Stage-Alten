@@ -15,3 +15,11 @@ UPDATE market.prodotti SET Quantita=(Quantita-@quantita) WHERE Id= @id;
 
 --AddProductToTheCart
 SELECT Nome,Prezzo,Quantita FROM market.prodotti WHERE Id=@id
+
+--UpdateProductById
+
+--UPDATE GENERALE:
+UPDATE market.prodotti SET Nome=@nome ,Prezzo=@prezzo ,Quantita=@quantita,Id_Categoria = @idCategoria WHERE market.prodotti.Id = @id
+
+--SELECT PER IMPOSTARE I VALORI DI DEFAULT SE UNA O PIU' COLONNE NON DEVONO ESSERE MODIFICATE
+SELECT Nome,Prezzo,Quantita,Id_categoria FROM market.prodotti WHERE market.prodotti.Id=@id

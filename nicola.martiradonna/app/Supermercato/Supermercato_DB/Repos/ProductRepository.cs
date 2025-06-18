@@ -13,7 +13,7 @@ namespace Supermercato_DB.Repos
     {
         readonly string _connectionstring = @"Server=tcp:its-alen-bari.database.windows.net,1433;Initial Catalog=its-alten-bari;Persist Security Info=False;User ID=nicola.francavilla;Password=2Vm&aic&AMo-#pxL;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=True;Connection Timeout=30;";
 
-        
+
 
         public bool GetAllProducts()
         {
@@ -53,7 +53,7 @@ namespace Supermercato_DB.Repos
             }
         }
 
-        public bool CreateNewProduct(Product product,int IdDescription)
+        public bool CreateNewProduct(Product product, int IdDescription)
         {
             string query = @"INSERT INTO market.prodotti (Nome,Prezzo,Quantita,Id_Categoria) 
                              VALUES(@nome,@prezzo,@quantita,@idDescription);";
@@ -159,7 +159,7 @@ namespace Supermercato_DB.Repos
                         }
 
 
-                            return true;
+                        return true;
                     }
                 }
             }
@@ -180,16 +180,16 @@ namespace Supermercato_DB.Repos
             {
                 using (SqlConnection connection = new SqlConnection(_connectionstring))
                 {
-                    using(SqlCommand command = new SqlCommand(query, connection))
+                    using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         connection.Open();
 
                         command.Parameters.AddWithValue("quantita", quantita);
                         command.Parameters.AddWithValue("id", id);
 
-                        int rowsAffected= command.ExecuteNonQuery();
+                        int rowsAffected = command.ExecuteNonQuery();
 
-                        if(rowsAffected > 0)
+                        if (rowsAffected > 0)
                         {
                             Console.WriteLine("\n La quantità è stata aggiornata");
                             return true;
@@ -242,6 +242,92 @@ namespace Supermercato_DB.Repos
             }
         }
 
-        
+
+        public bool UpdateProductById(Product prodotto, int idProdotto)
+        {
+            string query = @"UPDATE market.prodotti SET Nome=@nome ,Prezzo=@prezzo ,Quantita=@quantita,Id_Categoria = @idCategoria WHERE market.prodotti.Id = @id";
+
+            string queryReader = @"SELECT Nome,Prezzo,Quantita,Id_categoria FROM market.prodotti WHERE market.prodotti.Id=@id";
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(_connectionstring))
+                {
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+
+                        using (SqlCommand commandSelect = new SqlCommand(queryReader, connection))
+                        {
+                            connection.Open();
+
+                            commandSelect.Parameters.AddWithValue("id", idProdotto);
+                            var reader = commandSelect.ExecuteReader();
+
+
+
+                            while (reader.Read())
+                            {
+
+
+                                if (!(prodotto.Nome == null))
+                                {
+
+                                    command.Parameters.AddWithValue("nome", prodotto.Nome);
+
+                                }
+                                else
+                                {
+                                    command.Parameters.AddWithValue("nome", reader.GetString(0));
+                                }
+                                if (!(prodotto.Prezzo == 0))
+                                {
+                                    command.Parameters.AddWithValue("prezzo", prodotto.Prezzo);
+                                }
+                                else
+                                {
+                                    command.Parameters.AddWithValue("prezzo", reader.GetDecimal(1));
+                                }
+                                if (!(prodotto.Quantita == 0))
+                                {
+
+                                    command.Parameters.AddWithValue("quantita", prodotto.Quantita);
+                                }
+                                else
+                                {
+                                    command.Parameters.AddWithValue("quantita", reader.GetInt32(2));
+                                }
+                                if (!(prodotto.Id_Categoria == 0))
+                                {
+                                    command.Parameters.AddWithValue("idCategoria", prodotto.Id_Categoria);
+                                }
+                                else
+                                {
+                                    command.Parameters.AddWithValue("idCategoria", reader.GetInt64(3));
+                                }
+                            }
+                            reader.Close();
+                        }
+
+                        command.Parameters.AddWithValue("id", idProdotto);
+
+                        int rowsAffected = command.ExecuteNonQuery();
+
+                        if (rowsAffected > 0)
+                        {
+                            Console.WriteLine("!! Prodotto aggiornato con successo  !!");
+                            return true;
+
+                        }
+                        Console.WriteLine($"!!  Nessun prodotto trovato con id: {idProdotto}  !!");
+                        return false;
+
+                    }
+                }
+            }
+            catch (SqlException)
+            {
+                Console.WriteLine("!! Query non riuscita  !!");
+                return false;
+            }
+        }
     }
 }

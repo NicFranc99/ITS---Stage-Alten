@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using Supermercato_DB.Interfaces;
@@ -12,7 +13,10 @@ namespace Supermercato_DB
         public decimal TotaleScontrino { get; set; }
 
         public List<Product> ListaSpesa = new List<Product>();
-        public bool Menu(IProductRepository productRepository)
+
+
+
+        public bool Menu(IProductRepository productRepository,IProductService productService)
         {
             do
             {
@@ -36,7 +40,7 @@ namespace Supermercato_DB
                 {
                     case 1:
                         //INSERISCE UN NUOVO PRODOTTO NEL CARRELLLO
-                        InserisciProdottoNelCarrello(productRepository);
+                        InserisciProdottoNelCarrello(productRepository,productService);
                         break;
                     case 2:
                         //CALCOLA IL TOTALE DELLO SCONTRINO
@@ -54,75 +58,48 @@ namespace Supermercato_DB
 
         }
 
-        public void InserisciProdottoNelCarrello(IProductRepository productRepository)
+        public void InserisciProdottoNelCarrello(IProductRepository productRepository,IProductService productService)
         {
 
             productRepository.GetAllProducts();
-           
+
             int QuantitàTastiera = 0;
             int IdProdottoCarrello = 0;
-            
-                //FUNZIONE PER VERIFICARE SE L'ID INSERITO DA TASTIERA CORRISPONDE AD UN PRODOTTO PRESENTE NEL DB
-                 IdProdottoCarrello= VerificaIdProdottoDB(productRepository);
+
+            //FUNZIONE PER VERIFICARE SE L'ID INSERITO DA TASTIERA CORRISPONDE AD UN PRODOTTO PRESENTE NEL DB
+            IdProdottoCarrello = VerificaIdProdottoDB(productRepository,productService);
             do
             {
-                do
-                {
 
-                    try
-                    {
-                        Console.WriteLine("Inserisci la quantità del prodotto");
-                        QuantitàTastiera = Convert.ToInt32(Console.ReadLine());
-                    }
-                    catch (FormatException)
-                    {
-                        do
-                        {
-                            Console.WriteLine("Quantità non valida");
-                            Console.WriteLine("Inserisci la quantità del prodotto");
-                            QuantitàTastiera = Convert.ToInt32(Console.ReadLine());
-                        } while (QuantitàTastiera <= 0 || QuantitàTastiera is string);
-                    }
-
-                } while (QuantitàTastiera <= 0 || QuantitàTastiera is string);
-
-                
+                    QuantitàTastiera = productService.InserisciQuantita();
 
                 //SE LA QUANTITA' INSERITA NON E' DISPONIBILE PER QUEL PRODOTTO FA REINSERIRE LA QUANTITA'
             } while (!productRepository.IsProductQuantityAvaible(IdProdottoCarrello, QuantitàTastiera));
-            
+
             //AGGIORNA LA QUANTITA' SUL DB 
             productRepository.UpdateProductQuantity(IdProdottoCarrello, QuantitàTastiera);
 
             Product prodottoCarrello = new Product();
 
             prodottoCarrello.Quantita = QuantitàTastiera;
-            
+
 
             //AGGIUNGO ALLA LISTA DELLA SPESA IL PRODOTTO SELEZIONATO CON LA SUA QUANTITA'
-            ListaSpesa.Add(productRepository.AddProductToTheCart(IdProdottoCarrello,prodottoCarrello));
+            ListaSpesa.Add(productRepository.AddProductToTheCart(IdProdottoCarrello, prodottoCarrello));
 
 
             Console.WriteLine("Prodotto inserito nel carrello con successo");
 
         }
-        public int VerificaIdProdottoDB(IProductRepository productRepository)
+        public int VerificaIdProdottoDB(IProductRepository productRepository,IProductService productService)
         {
             int IdProdottoCarrello = 0;
             do
             {
-                do
-                {
-                    try
-                    {
-                        Console.WriteLine("\nInserisci l' ID del prodotto da inserire nel carrello: ");
-                        IdProdottoCarrello = Convert.ToInt32(Console.ReadLine());
-                    }
-                    catch (FormatException)
-                    {
-
-                    }
-                } while (IdProdottoCarrello <= 0 || IdProdottoCarrello is string);
+                
+                       string mxs ="\nInserisci l' ID del prodotto da inserire nel carrello: ";
+                        IdProdottoCarrello = productService.GetId(mxs);
+                   
 
             } while (!productRepository.GetProductById(IdProdottoCarrello));
 

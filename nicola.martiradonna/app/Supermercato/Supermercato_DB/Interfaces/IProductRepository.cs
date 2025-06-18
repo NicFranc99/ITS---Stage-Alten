@@ -25,6 +25,6 @@ namespace Supermercato_DB.Interfaces
         //AGGIUNGE ALL' OGGETTO ISTANZIATO PRODOTTO I VALORI PRESENTI NEL DB ASSEGNANDO ANCHE IL PREZZO IN BASE ALLA QUANTITA'
 
 
-
+        bool UpdateProductById(Product prodotto,int idProdotto);
     }
 }
