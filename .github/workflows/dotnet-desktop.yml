@@ -23,11 +23,11 @@ jobs:
 
       - name: Install dependencies 📂
         run: |
-          dir
-          dotnet restore WebApi
-          dotnet build WebApi -c Release --no-restore
-          dotnet publish WebApi -c Release --no-build
+          cd gabriele.cipriani/esercizio parrucchiere/
+          dotnet restore esercizio parrucchiere.sln
+          dotnet build  esercizio parrucchiere.sln -c Release --no-restore
+          dotnet publish  esercizio parrucchiere.sln -c Release --no-build
             --output '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}'
 
       - name: Build 🧱
-        run: dotnet build WebApi --configuration Release --no-restore
+        run: dotnet build  esercizio parrucchiere.sln --configuration Release --no-restore
