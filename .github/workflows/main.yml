@@ -1,4 +1,4 @@
-name: Build 🛠️
+name: Build Parrucchiere 🛠️
 
 on:
   workflow_dispatch:
