@@ -10,7 +10,7 @@ on:
 
 env:
   PARRUCCHIERE_SOL_PATH: gabriele.cipriani/esercizio parrucchiere/esercizio parrucchiere.sln
-  MARKET_SOL_PATH: gabriele.cipriani/esercizio parrucchiere/esercizio parrucchiere.sln
+  MARKET_SOL_PATH: nicola.martiradonna/Supermercato/Supermercato.sln
 
 jobs:
   build_parrucchiere:
