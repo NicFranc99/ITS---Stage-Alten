@@ -13,5 +13,17 @@ namespace Supermercato_DB.Interfaces
 
         int AddProductDescription(Product product, ICategoryRepository categoryRepository);
 
+        bool MenuForUpdatingProduct(IProductRepository productRepository,ICategoryRepository categoryRepository,bool permanenza);
+
+        int InserisciQuantita();
+
+        decimal InserisciPrezzo();
+
+        string InserisciNome();
+
+        int GetId(string mxs);
+
+        
+
     }
 }
