@@ -33,7 +33,7 @@ namespace Supermercato_DB
                 try
                 {
                     Console.WriteLine("\nSeleziona l' operazione che vuoi eseguire");
-                    Console.WriteLine("\n1) Seleziona tutti i prodotti presenti nel magazzino\n2) Crea uno scontrino\n3) Inserisci un nuovo prodotto nel Magazzino\n4) Chiusura Programma");
+                    Console.WriteLine("\n1) Seleziona tutti i prodotti presenti nel magazzino\n2) Crea uno scontrino\n3) Inserisci un nuovo prodotto nel Magazzino\n4) Modifica un prodotto nel magazzino\n5) Chiudi programma");
                     SceltaUtente = Convert.ToInt32(Console.ReadLine());
                 }
                 catch (FormatException)
@@ -41,7 +41,7 @@ namespace Supermercato_DB
                     Console.WriteLine("\n!!  Formato sbagliato  !!");
                 }
 
-            } while (!(SceltaUtente is int) && SceltaUtente < 0 || SceltaUtente > 4);
+            } while (!(SceltaUtente is int) && SceltaUtente < 0 || SceltaUtente > 5);
 
 
             switch (SceltaUtente)
@@ -57,7 +57,7 @@ namespace Supermercato_DB
                     do
                     {
 
-                    } while (scontrino.Menu(productRepository));
+                    } while (scontrino.Menu(productRepository, productService));
                     break;
 
                 case 3:
@@ -79,6 +79,15 @@ namespace Supermercato_DB
                     break;
                 case 4:
 
+                    do {
+
+                        Console.WriteLine("\n  MODIFICA DI UN PRODOTTO  ");
+
+                    }while(productService.MenuForUpdatingProduct(productRepository, categoryRepository,permanenza));
+                    
+                    break;
+
+                case 5:
                     Console.WriteLine("Chiusura programma...");
                     permanenza = false;
                     break;
