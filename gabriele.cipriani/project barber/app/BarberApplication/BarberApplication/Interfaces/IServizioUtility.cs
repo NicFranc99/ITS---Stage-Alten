@@ -13,5 +13,6 @@ namespace BarberApplication.Interfaces
         public bool DeleteServizio(int id);
         public void GetAllServizio();
         public bool GetServizioByID(int id);
+        public bool UpdateServizioByID(int id, Servizio servizio);
     }
 }
