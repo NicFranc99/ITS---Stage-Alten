@@ -9,8 +9,8 @@ on:
       - feature/*
 
 env:
-  PARRUCCHIERE_SOL_PATH: "gabriele.cipriani/esercizio parrucchiere/esercizio parrucchiere.sln"
-  MARKET_SOL_PATH: "gabriele.cipriani/esercizio parrucchiere/esercizio parrucchiere.sln"
+  PARRUCCHIERE_SOL_PATH: gabriele.cipriani/esercizio parrucchiere/esercizio parrucchiere.sln
+  MARKET_SOL_PATH: gabriele.cipriani/esercizio parrucchiere/esercizio parrucchiere.sln
 
 jobs:
   build_parrucchiere:
@@ -26,10 +26,10 @@ jobs:
           dotnet-version: '8.0.x'
 
       - name: Restore dependencies
-        run: dotnet restore ${{ env.PARRUCCHIERE_SOL_PATH }}
+        run: dotnet restore "${{ env.PARRUCCHIERE_SOL_PATH }}"
 
       - name: Build solution
-        run: dotnet build ${{ env.PARRUCCHIERE_SOL_PATH }} --configuration Release --no-restore
+        run: dotnet build "${{ env.PARRUCCHIERE_SOL_PATH }}" --configuration Release --no-restore
 
 
   build_market:
