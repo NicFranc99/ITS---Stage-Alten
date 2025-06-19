@@ -340,73 +340,54 @@ namespace Supermercato_DB.Repos
 
         public bool UpdateProductByIdString(Product prodotto, int idProdotto)
         {
-            string query = "UPDATE market.prodotti SET";
+            string query = "UPDATE market.prodotti SET ";
+            SqlConnection connection = new SqlConnection(_connectionstring);
+            SqlCommand command = new SqlCommand();
+            
 
-            //SE TUTTE LE PROPRIETA' DEL PRODUCT NON SONO NULL
-            if (!(prodotto.Nome == null) && !(prodotto.Prezzo == 0) && !(prodotto.Quantita == 0) && !(prodotto.Id_Categoria == 0))
+            if (prodotto.Id_Categoria != 0)
             {
-                query += " Nome=@nome ,Prezzo=@prezzo ,Quantita=@quantita,Id_Categoria = @idCategoria";
+                query += " Id_Categoria= @idCategoria ";
+                command.Parameters.AddWithValue("idCategoria", prodotto.Id_Categoria);
             }
-            //SE SOLO IL PREZZO DEL PRODOTTO NON E' NULL
-            if (!(prodotto.Prezzo == 0) && (prodotto.Quantita ==0) && (prodotto.Nome==null) && (prodotto.Id_Categoria==0))
+            
+            if (prodotto.Nome != null)
             {
-                query += " Prezzo= @prezzo";
+                query += ", Nome=@nome ,";
+                command.Parameters.AddWithValue("nome", prodotto.Nome);
             }
-            // SE SOLO LA QUANTITA' E IL PREZZO NON SONO NULL
-            if (!(prodotto.Quantita == 0) && !(prodotto.Prezzo == 0) && (prodotto.Nome== null) && (prodotto.Id_Categoria == 0))
+            
+           
+            
+            if (prodotto.Quantita != 0)
             {
-                query += " Prezzo= @prezzo ,Quantita=@quantita";
+                query += " Quantita=@quantita ,";
+                command.Parameters.AddWithValue("quantita", prodotto.Quantita);
             }
-            // SE SOLO L' ID CATEGORIA NON E' NULL
-            if (!(prodotto.Id_Categoria == 0) && (prodotto.Quantita == 0) && (prodotto.Nome == null) && (prodotto.Prezzo == 0))
+            
+            if (prodotto.Prezzo != 0)
             {
-                query += " Id_Categoria= @idCategoria";
+                query += " Prezzo= @prezzo ";
+                command.Parameters.AddWithValue ("prezzo", prodotto.Prezzo);
             }
 
             query += " WHERE Id = @id";
+            command.Parameters.AddWithValue("id", idProdotto);
 
-                try
+            command.Connection = connection;
+            command.CommandText = query;
+            try
             {
-                using (SqlConnection connection = new SqlConnection(_connectionstring))
+                using (connection)
                 {
-                    using (SqlCommand command = new SqlCommand(query, connection))
+                    using (command)
                     {
                         
                         
-                        if (!(prodotto.Nome == null) && !(prodotto.Prezzo == 0) && !(prodotto.Quantita == 0) && !(prodotto.Id_Categoria == 0))
-                        {
-                            
-                            command.Parameters.AddWithValue("nome", prodotto.Nome);
-                            command.Parameters.AddWithValue("prezzo", prodotto.Prezzo);
-                            command.Parameters.AddWithValue("quantita", prodotto.Quantita);
-                            command.Parameters.AddWithValue("idCategoria", prodotto.Id_Categoria);
-                            command.Parameters.AddWithValue("id", idProdotto);
-                        }
-                                  
-                        if (!(prodotto.Prezzo == 0) && (prodotto.Quantita == 0) && (prodotto.Nome == null) && (prodotto.Id_Categoria == 0))
-                        {
-                            
-                            command.Parameters.AddWithValue("prezzo", prodotto.Prezzo);
-                            command.Parameters.AddWithValue("id", idProdotto);
-                        }
-                       
-                        if (!(prodotto.Quantita == 0) && !(prodotto.Prezzo == 0) && (prodotto.Nome == null) && (prodotto.Id_Categoria == 0))
-                        {
-                            
-                            command.Parameters.AddWithValue("prezzo", prodotto.Prezzo);
-                            command.Parameters.AddWithValue("quantita", prodotto.Quantita);
-                            command.Parameters.AddWithValue("id", idProdotto);
-                        }
-                       
-                        if (!(prodotto.Id_Categoria == 0) && (prodotto.Quantita == 0) && (prodotto.Nome == null) && (prodotto.Prezzo == 0))
-                        {
-                            
-                            command.Parameters.AddWithValue("idCategoria", prodotto.Id_Categoria);
-                            command.Parameters.AddWithValue("id", idProdotto);
-                        }
+                        
                         connection.Open();
                        
-                          int rowsAffected= command.ExecuteNonQuery();
+                        int rowsAffected= command.ExecuteNonQuery();
 
                         if(rowsAffected > 0)
                         {

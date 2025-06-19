@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{C80CD413-E03C-4520-82CE-7866DBEA8871}|Supermercato_DB\\Supermercato_DB.csproj|solutionrelative:supermercato_db\\repos\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{C80CD413-E03C-4520-82CE-7866DBEA8871}|Supermercato_DB\\Supermercato_DB.csproj|c:\\users\\nmartiradonna\\desktop\\repo\\its---stage-alten\\nicola.martiradonna\\app\\supermercato\\supermercato_db\\supermercato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C80CD413-E03C-4520-82CE-7866DBEA8871}|Supermercato_DB\\Supermercato_DB.csproj|solutionrelative:supermercato_db\\supermercato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C80CD413-E03C-4520-82CE-7866DBEA8871}|Supermercato_DB\\Supermercato_DB.csproj|c:\\users\\nmartiradonna\\desktop\\repo\\its---stage-alten\\nicola.martiradonna\\app\\supermercato\\supermercato_db\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C80CD413-E03C-4520-82CE-7866DBEA8871}|Supermercato_DB\\Supermercato_DB.csproj|solutionrelative:supermercato_db\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -22,24 +26,35 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Supermercato.cs",
+              "DocumentMoniker": "C:\\Users\\nmartiradonna\\Desktop\\repo\\ITS---Stage-Alten\\nicola.martiradonna\\app\\Supermercato\\Supermercato_DB\\Supermercato.cs",
+              "RelativeDocumentMoniker": "Supermercato_DB\\Supermercato.cs",
+              "ToolTip": "C:\\Users\\nmartiradonna\\Desktop\\repo\\ITS---Stage-Alten\\nicola.martiradonna\\app\\Supermercato\\Supermercato_DB\\Supermercato.cs",
+              "RelativeToolTip": "Supermercato_DB\\Supermercato.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAgwEYAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T08:20:12.735Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "ProductService.cs",
               "DocumentMoniker": "C:\\Users\\nmartiradonna\\Desktop\\repo\\ITS---Stage-Alten\\nicola.martiradonna\\app\\Supermercato\\Supermercato_DB\\Services\\ProductService.cs",
               "RelativeDocumentMoniker": "Supermercato_DB\\Services\\ProductService.cs",
               "ToolTip": "C:\\Users\\nmartiradonna\\Desktop\\repo\\ITS---Stage-Alten\\nicola.martiradonna\\app\\Supermercato\\Supermercato_DB\\Services\\ProductService.cs",
               "RelativeToolTip": "Supermercato_DB\\Services\\ProductService.cs",
-              "ViewState": "AgIAACQBAAAAAAAAAAAnwCkBAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkBAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T10:27:05.978Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-18T10:27:05.978Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "IProductRepository.cs",
               "DocumentMoniker": "C:\\Users\\nmartiradonna\\Desktop\\repo\\ITS---Stage-Alten\\nicola.martiradonna\\app\\Supermercato\\Supermercato_DB\\Interfaces\\IProductRepository.cs",
               "RelativeDocumentMoniker": "Supermercato_DB\\Interfaces\\IProductRepository.cs",
@@ -57,7 +72,7 @@
               "RelativeDocumentMoniker": "Supermercato_DB\\Repos\\ProductRepository.cs",
               "ToolTip": "C:\\Users\\nmartiradonna\\Desktop\\repo\\ITS---Stage-Alten\\nicola.martiradonna\\app\\Supermercato\\Supermercato_DB\\Repos\\ProductRepository.cs",
               "RelativeToolTip": "Supermercato_DB\\Repos\\ProductRepository.cs",
-              "ViewState": "AgIAAPsAAAAAAAAAAAAwwFsBAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAIgBAAAAAAAAAAAAAG8BAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-18T09:15:13.799Z",
               "EditorCaption": ""
