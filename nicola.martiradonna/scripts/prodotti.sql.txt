@@ -1,0 +1,25 @@
+--GetAllProducts
+SELECT SELECT market.prodotti.Id,Nome,Prezzo,Descrizione,Quantita FROM market.prodotti JOIN market.categoria on Id_Categoria = market.categoria.Id
+
+--CreateNewProduct
+INSERT INTO market.prodotti (Nome,Prezzo,Quantita,Id_Categoria) VALUES(@nome,@prezzo,@quantita,@idDescription);
+
+--GetProductById
+SELECT market.prodotti.Id,Nome,Prezzo,Descrizione,Quantita FROM market.prodotti JOIN market.categoria on Id_Categoria = market.categoria.Id  WHERE market.prodotti.Id=@id";
+
+--IsProductQuantityAvaible
+SELECT Nome,Quantita FROM market.prodotti WHERE @quantita<=Quantita AND Id=@id;
+
+--UpdateProductQuantity
+UPDATE market.prodotti SET Quantita=(Quantita-@quantita) WHERE Id= @id;
+
+--AddProductToTheCart
+SELECT Nome,Prezzo,Quantita FROM market.prodotti WHERE Id=@id
+
+--UpdateProductById
+
+--UPDATE GENERALE:
+UPDATE market.prodotti SET Nome=@nome ,Prezzo=@prezzo ,Quantita=@quantita,Id_Categoria = @idCategoria WHERE market.prodotti.Id = @id
+
+--SELECT PER IMPOSTARE I VALORI DI DEFAULT SE UNA O PIU' COLONNE NON DEVONO ESSERE MODIFICATE
+SELECT Nome,Prezzo,Quantita,Id_categoria FROM market.prodotti WHERE market.prodotti.Id=@id
