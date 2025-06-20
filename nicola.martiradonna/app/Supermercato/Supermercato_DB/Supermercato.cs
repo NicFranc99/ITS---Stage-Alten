@@ -33,7 +33,7 @@ namespace Supermercato_DB
                 try
                 {
                     Console.WriteLine("\nSeleziona l' operazione che vuoi eseguire");
-                    Console.WriteLine("\n1) Seleziona tutti i prodotti presenti nel magazzino\n2) Crea uno scontrino\n3) Inserisci un nuovo prodotto nel Magazzino\n4) Modifica un prodotto nel magazzino\n5) Chiudi programma");
+                    Console.WriteLine("\n1) Visualizza i prodotti presenti nel magazzino\n2) Crea uno scontrino\n3) Inserisci un nuovo prodotto nel Magazzino\n4) Modifica un prodotto nel magazzino\n5) Chiudi programma");
                     SceltaUtente = Convert.ToInt32(Console.ReadLine());
                 }
                 catch (FormatException)
