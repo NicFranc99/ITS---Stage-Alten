@@ -1,0 +1,14 @@
+C:\Users\ccolia\source\repos\cassa\bin\Debug\net8.0\cassa.exe
+C:\Users\ccolia\source\repos\cassa\bin\Debug\net8.0\cassa.deps.json
+C:\Users\ccolia\source\repos\cassa\bin\Debug\net8.0\cassa.runtimeconfig.json
+C:\Users\ccolia\source\repos\cassa\bin\Debug\net8.0\cassa.dll
+C:\Users\ccolia\source\repos\cassa\bin\Debug\net8.0\cassa.pdb
+C:\Users\ccolia\source\repos\cassa\obj\Debug\net8.0\cassa.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ccolia\source\repos\cassa\obj\Debug\net8.0\cassa.AssemblyInfoInputs.cache
+C:\Users\ccolia\source\repos\cassa\obj\Debug\net8.0\cassa.AssemblyInfo.cs
+C:\Users\ccolia\source\repos\cassa\obj\Debug\net8.0\cassa.csproj.CoreCompileInputs.cache
+C:\Users\ccolia\source\repos\cassa\obj\Debug\net8.0\cassa.dll
+C:\Users\ccolia\source\repos\cassa\obj\Debug\net8.0\refint\cassa.dll
+C:\Users\ccolia\source\repos\cassa\obj\Debug\net8.0\cassa.pdb
+C:\Users\ccolia\source\repos\cassa\obj\Debug\net8.0\cassa.genruntimeconfig.cache
+C:\Users\ccolia\source\repos\cassa\obj\Debug\net8.0\ref\cassa.dll

@@ -96,7 +96,7 @@ namespace Supermercato
 
             foreach (var item in ListaProdotti)
             {
-                Console.WriteLine($"{item.NomeProdotto} \t {String.Format("{0:0.00}", item.PrezzoProdotto)} euro \t\tQuantità prodotto:{item.Quantita}");
+                Console.WriteLine($"{item.NomeProdotto} \t {String.Format("{0:0.00}", item.PrezzoProdotto)} euro \t\tQuantità prodotto:{item.Quantita} \t\tTipo prodotto:{item.TipoProdotto}");
 
             }
 
