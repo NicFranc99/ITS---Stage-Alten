@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "WYbO3bCXPEg=",
+  "dgSpecHash": "cEAZtYJuKDk=",
   "success": true,
   "projectFilePath": "C:\\Users\\nmartiradonna\\Desktop\\repo\\ITS---Stage-Alten\\nicola.martiradonna\\app\\Supermercato\\Supermercato_DB\\Supermercato_DB.csproj",
   "expectedPackageFiles": [
@@ -43,7 +43,8 @@
     "C:\\Users\\nmartiradonna\\.nuget\\packages\\system.security.cryptography.protecteddata\\8.0.0\\system.security.cryptography.protecteddata.8.0.0.nupkg.sha512",
     "C:\\Users\\nmartiradonna\\.nuget\\packages\\system.text.encodings.web\\4.7.2\\system.text.encodings.web.4.7.2.nupkg.sha512",
     "C:\\Users\\nmartiradonna\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512",
-    "C:\\Users\\nmartiradonna\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512"
+    "C:\\Users\\nmartiradonna\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
+    "C:\\Users\\nmartiradonna\\.nuget\\packages\\xunit.assert\\2.9.3\\xunit.assert.2.9.3.nupkg.sha512"
   ],
   "logs": []
 }
