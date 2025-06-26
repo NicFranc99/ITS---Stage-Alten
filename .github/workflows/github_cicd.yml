@@ -9,7 +9,7 @@ on:
       - feature/*
 
 env:
-  PARRUCCHIERE_SOL_PATH: gabriele.cipriani/esercizio parrucchiere/esercizio parrucchiere.sln
+  PARRUCCHIERE_SOL_PATH: gabriele.cipriani/project barber/app/BarberApplication/BarberApplication.sln
   MARKET_SOL_PATH: nicola.martiradonna/app/Supermercato/Supermercato_DB.sln
 
 jobs:
