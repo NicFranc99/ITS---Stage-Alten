@@ -33,7 +33,7 @@ namespace Supermercato_DB
                 try
                 {
                     Console.WriteLine("\nSeleziona l' operazione che vuoi eseguire");
-                    Console.WriteLine("\n1) Visualizza i prodotti presenti nel magazzino\n2) Crea uno scontrino\n3) Inserisci un nuovo prodotto nel Magazzino\n4) Modifica un prodotto nel magazzino\n5) Chiudi programma");
+                    Console.WriteLine("\n1) Visualizza i prodotti presenti nel magazzino\n2) Inserisci un nuovo prodotto nel Magazzino\n3) Modifica un prodotto nel magazzino\n4) Chiudi programma");
                     SceltaUtente = Convert.ToInt32(Console.ReadLine());
                 }
                 catch (FormatException)
@@ -41,7 +41,7 @@ namespace Supermercato_DB
                     Console.WriteLine("\n!!  Formato sbagliato  !!");
                 }
 
-            } while (!(SceltaUtente is int) && SceltaUtente < 0 || SceltaUtente > 5);
+            } while (!(SceltaUtente is int) && SceltaUtente < 0 || SceltaUtente > 4);
 
 
             switch (SceltaUtente)
@@ -51,46 +51,39 @@ namespace Supermercato_DB
                     break;
 
                 case 2:
-                    Scontrino scontrino = new Scontrino();
-                    Console.WriteLine("\nNUOVO SCONTRINO");
-
-                    do
-                    {
-
-                    } while (scontrino.Menu(productRepository, productService));
-                    break;
-
-                case 3:
-
                     Console.WriteLine("\n  INSERIMENTO NUOVO PRODOTTO  ");
                     Product product = new Product();
 
                     do
                     {
-                      
+
                     } while (!productService.AddProduct(product));
 
                     //ASSEGNA LA DESCRIZIONE TRAMITE ID AL PRODOTTO
-                    int IdDescription= productService.AddProductDescription(product,categoryRepository);
+                    product.Id_Categoria = productService.AddProductDescription(product, categoryRepository);
 
                     //INSERISCE IL NUOVO PRODOTTO NEL DB CON L'ID DELLA CATEGORIA ASSEGNATO IN PRECEDENZA
-                    productRepository.CreateNewProduct(product,IdDescription);
+                    productRepository.CreateNewProduct(product);
+                    break;
+
+                case 3:
+
+                    do
+                    {
+
+                        Console.WriteLine("\n  MODIFICA DI UN PRODOTTO  ");
+
+                    } while (productService.MenuForUpdatingProduct(productRepository, categoryRepository, permanenza));
+
 
                     break;
                 case 4:
 
-                    do {
-
-                        Console.WriteLine("\n  MODIFICA DI UN PRODOTTO  ");
-
-                    }while(productService.MenuForUpdatingProduct(productRepository, categoryRepository,permanenza));
-                    
-                    break;
-
-                case 5:
                     Console.WriteLine("Chiusura programma...");
                     permanenza = false;
                     break;
+
+                   
             }
             return permanenza;
         }

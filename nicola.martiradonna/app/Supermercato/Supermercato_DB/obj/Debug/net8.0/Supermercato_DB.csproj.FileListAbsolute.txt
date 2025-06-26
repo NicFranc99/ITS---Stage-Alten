@@ -140,3 +140,4 @@ C:\Users\nmartiradonna\Desktop\repo\ITS---Stage-Alten\nicola.martiradonna\app\Su
 C:\Users\nmartiradonna\Desktop\repo\ITS---Stage-Alten\nicola.martiradonna\app\Supermercato\Supermercato_DB\obj\Debug\net8.0\Supermercato_DB.pdb
 C:\Users\nmartiradonna\Desktop\repo\ITS---Stage-Alten\nicola.martiradonna\app\Supermercato\Supermercato_DB\obj\Debug\net8.0\Supermercato_DB.genruntimeconfig.cache
 C:\Users\nmartiradonna\Desktop\repo\ITS---Stage-Alten\nicola.martiradonna\app\Supermercato\Supermercato_DB\obj\Debug\net8.0\ref\Supermercato_DB.dll
+C:\Users\nmartiradonna\Desktop\repo\ITS---Stage-Alten\nicola.martiradonna\app\Supermercato\Supermercato_DB\bin\Debug\net8.0\xunit.assert.dll

@@ -15,11 +15,11 @@ namespace Supermercato_DB.Interfaces
 
         bool MenuForUpdatingProduct(IProductRepository productRepository,ICategoryRepository categoryRepository,bool permanenza);
 
-        int InserisciQuantita();
+        int InserisciQuantita(int quantita);
 
-        decimal InserisciPrezzo();
+        decimal InserisciPrezzo(decimal prezzo);
 
-        string InserisciNome();
+        string InserisciNome(string nome);
 
         int GetId(string mxs);
 
