@@ -4,7 +4,7 @@ using Microsoft.Data.SqlClient;
 
 namespace BarberApplication.Repos
 {
-    public class ClientRepository : IDatabaseClient
+    public class ClientRepository : IClientRepository
     {
 
 

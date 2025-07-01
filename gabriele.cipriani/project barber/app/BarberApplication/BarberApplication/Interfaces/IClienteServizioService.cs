@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BarberApplication.Interfaces
 {
-    public interface IClienteServizioUtility
+    public interface IClienteServizioService
     {
         void AvviaOperazioni();
     }

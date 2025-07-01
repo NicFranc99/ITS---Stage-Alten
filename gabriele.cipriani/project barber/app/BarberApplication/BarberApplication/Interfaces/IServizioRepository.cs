@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BarberApplication.Interfaces
 {
-    internal interface IDatabaseServizio
+    public interface IServizioRepository
     {
         public bool CreateNewServizio(Servizio servizio);
         public bool GetAllServizi();

@@ -4,7 +4,7 @@ using Microsoft.Data.SqlClient;
 
 namespace BarberApplication.Repos
 {
-    internal class Cliente_ServizioRepository : IDatabaseCliente_Servizio
+    internal class ClienteServizioRepository : IClienteServizioRepository
     {
         readonly string _connectionstring = @"Server=tcp:its-alen-bari.database.windows.net,1433;Initial Catalog=its-alten-bari;Persist Security Info=False;User ID=nicola.francavilla;Password=2Vm&aic&AMo-#pxL;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=True;Connection Timeout=30;";
         public bool AssociaServizio(Cliente_Servizio cliente_servizio)

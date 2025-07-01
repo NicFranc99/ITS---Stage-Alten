@@ -2,24 +2,38 @@
 using BarberApplication.Interfaces;
 using BarberApplication.Repos;
 using BarberApplication.utility;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+HostApplicationBuilder builder = Host.CreateApplicationBuilder();
 
-IUserRepository databaseUser = new UserRepository();
-IDatabaseClient databaseClient = new ClientRepository();
+var userService=builder.Services.AddScoped<IUserRepository, UserRepository>();
+
+var clientDatabaseService = builder.Services.AddScoped<IClientRepository, ClientRepository>();
+
+var clientService = builder.Services.AddScoped<IClientService, ClientService>();
+
+var servizioService = builder.Services.AddScoped<IServizioService, ServizioService>();
+
+var databaseServizio = builder.Services.AddScoped<IServizioRepository, ServizioRepository>();
+var serviceProvider = builder.Services.BuildServiceProvider();
+
 User user = new User();
-Client client = new Client();
 Client cliente = new Client();
 Servizio servizio = new Servizio();
-IClientUtility clientUtility = new ClientUtility();
-IServizioUtility servizioUtility = new ServizioUtility();
 int idGet = 0;
 int idServizio = 0;
 int scelta = 0;
 
-IDatabaseCliente_Servizio repository = new Cliente_ServizioRepository();
+IClienteServizioRepository repository = new ClienteServizioRepository();
+    
 
-IClienteServizioUtility utility = new ClienteServizioUtility(repository, clientUtility, servizioUtility);
 
 
+var databaseUser= serviceProvider.GetRequiredService<IUserRepository>();
+
+IClientService clientUtility = serviceProvider.GetRequiredService<IClientService>();
+IServizioService servizioUtility = serviceProvider.GetRequiredService<IServizioService>();
+IClienteServizioService utility = serviceProvider.GetRequiredService<IClienteServizioService>();
 
 
 do
