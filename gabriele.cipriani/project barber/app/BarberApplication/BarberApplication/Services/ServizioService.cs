@@ -10,12 +10,12 @@ using System.Threading.Tasks;
 
 namespace BarberApplication.utility
 {
-    public class ServizioUtility : IServizioUtility
+    public class ServizioService(IServizioRepository databaseServizio) : IServizioService
     {
         public void CreateServizio(Servizio servizio)
         {
 
-            IDatabaseServizio databaseServizio = new ServizioRepository();
+   
             if (databaseServizio.CreateNewServizio(servizio))
             {
                 Console.WriteLine("Servizio creato con successo!");
@@ -29,9 +29,9 @@ namespace BarberApplication.utility
 
         public bool DeleteServizio(int idServizio)
         {
-            IDatabaseServizio databaseClient = new ServizioRepository();
+          
 
-            if (databaseClient.DeleteServizioByID(idServizio))
+            if (databaseServizio.DeleteServizioByID(idServizio))
             {
                 Console.WriteLine("Servizio eliminato con successo!");
                 return true;
@@ -45,7 +45,7 @@ namespace BarberApplication.utility
 
         public void GetAllServizio()
         {
-            IDatabaseServizio databaseServizio = new ServizioRepository();
+          
 
             Console.WriteLine("La lista dei servizi è: \n");
             if (databaseServizio.GetAllServizi())
@@ -61,7 +61,7 @@ namespace BarberApplication.utility
 
         public bool GetServizioByID(int idServizio)
         {
-            IDatabaseServizio databaseServizio = new ServizioRepository();
+        
             if (databaseServizio.GetServizioByID(idServizio))
             {
                 Console.WriteLine("Servizio recuperato con successo!");
@@ -76,7 +76,6 @@ namespace BarberApplication.utility
 
         public bool UpdateServizioByID(int idServizio,Servizio servizio)
         {
-           IDatabaseServizio databaseServizio = new ServizioRepository();
             if (databaseServizio.UpdateServizioByID(idServizio, servizio))
             {
                 Console.WriteLine("Servizio aggiornato con successo!");

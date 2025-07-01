@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BarberApplication.Interfaces
 {
-    public  interface IClientUtility
+    public  interface IClientService
     {
         public void CreateClient(Client cliente);
         public bool DeleteClient(int id);

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BarberApplication.Interfaces
 {
-    public interface IServizioUtility
+    public interface IServizioService
     {
         public void CreateServizio(Servizio servizio);
         public bool DeleteServizio(int id);

@@ -5,16 +5,16 @@
     using System;
     using System.Security.Cryptography.X509Certificates;
 
-    public class ClienteServizioUtility : IClienteServizioUtility
+    public class ClienteServizioService : IClienteServizioService
     {
-        public IDatabaseCliente_Servizio Repository;
-        public IClientUtility ClientUtility;
-        public IServizioUtility ServizioUtility;
+        public IClienteServizioRepository Repository;
+        public IClientService ClientUtility;
+        public IServizioService ServizioUtility;
 
-        public ClienteServizioUtility(
-            IDatabaseCliente_Servizio repository,
-            IClientUtility clientUtility,
-            IServizioUtility servizioUtility)
+        public ClienteServizioService(
+            IClienteServizioRepository repository,
+            IClientService clientUtility,
+            IServizioService servizioUtility)
         {
             Repository = repository;
             ClientUtility = clientUtility;

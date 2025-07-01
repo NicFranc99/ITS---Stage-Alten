@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BarberApplication.Repos
 {
-    public class ServizioRepository : IDatabaseServizio
+    public class ServizioRepository : IServizioRepository
     {
         readonly string _connectionstring = @"Server=tcp:its-alen-bari.database.windows.net,1433;Initial Catalog=its-alten-bari;Persist Security Info=False;User ID=nicola.francavilla;Password=2Vm&aic&AMo-#pxL;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=True;Connection Timeout=30;";
 

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace BarberApplication.Interfaces
 {
    
-    internal interface IDatabaseClient
+    public interface IClientRepository
     {
         
         public bool CreateNewClient(Client client);

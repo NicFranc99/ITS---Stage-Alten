@@ -5,12 +5,12 @@ using BarberApplication.Repos;
 
 namespace BarberApplication.utility
 {
-    public class ClientUtility : IClientUtility
+    public class ClientService(IClientRepository databaseClient) : IClientService
     {
-        void IClientUtility.CreateClient(Client cliente)
+        void IClientService.CreateClient(Client cliente)
         {
             
-            IDatabaseClient databaseClient = new ClientRepository();
+            
 
             if (databaseClient.CreateNewClient(cliente))
             {
@@ -22,9 +22,9 @@ namespace BarberApplication.utility
             }
         }
 
-        bool IClientUtility.DeleteClient(int id)
+        bool IClientService.DeleteClient(int id)
         {
-            IDatabaseClient databaseClient = new ClientRepository();
+            
 
             var client = databaseClient.GetClientByID(id);
             if (client == null)
@@ -45,9 +45,9 @@ namespace BarberApplication.utility
             }
         }
 
-        void IClientUtility.GetAllClients()
+        void IClientService.GetAllClients()
         {
-            IDatabaseClient databaseClient = new ClientRepository();
+           
 
             Console.WriteLine("La lista dei clienti è: \n");
             if (databaseClient.GetAllClient())
@@ -60,9 +60,9 @@ namespace BarberApplication.utility
             }
         }
 
-        bool IClientUtility.GetClientsByID(int id)
+        bool IClientService.GetClientsByID(int id)
         {
-            IDatabaseClient databaseClient = new ClientRepository();
+            
 
             if (databaseClient.GetClientByID(id))
             {
@@ -73,9 +73,9 @@ namespace BarberApplication.utility
             return false;
         }
 
-        bool IClientUtility.UpdateClientsByID(int id, Client cliente)
+        bool IClientService.UpdateClientsByID(int id, Client cliente)
         {
-            IDatabaseClient databaseClient = new ClientRepository();
+            
 
             if (databaseClient.UpdateClientByID(id, cliente))
             {
