@@ -13,7 +13,7 @@ namespace Supermercato_DB.Interfaces
         bool GetProductById(int id);
 
 
-        bool CreateNewProduct(Product product,int IdDescription);
+        bool CreateNewProduct(Product product);
         //INSERISCE UN NUOVO PRODOTTO
 
 

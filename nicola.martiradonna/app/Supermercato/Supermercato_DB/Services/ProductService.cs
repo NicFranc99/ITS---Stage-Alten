@@ -7,30 +7,19 @@ using Microsoft.Identity.Client;
 using Supermercato_DB.Interfaces;
 
 namespace Supermercato_DB.Services
-{
+{  
     public class ProductService : IProductService
     {
+        
         public int SceltaMenu { get; set; }
 
         public string mxs { get; set; } = "Inserisci l' id del prodotto da modificare";
 
-        public bool AddProduct(Product product)
-        {
 
-            product.Nome = InserisciNome();
-            product.Prezzo = InserisciPrezzo();
-            product.Quantita = InserisciQuantita();
-
-            return true;
-
-        }
-
-
-
-        public string InserisciNome()
+        public string InserisciNome(string Nome)
         {
             Console.WriteLine("\nInserisci il nome del prodotto");
-            string Nome = Console.ReadLine();
+            Nome = Console.ReadLine();
 
             while (string.IsNullOrWhiteSpace(Nome) || (Nome is not string))
             {
@@ -39,9 +28,9 @@ namespace Supermercato_DB.Services
             }
             return Nome;
         }
-        public decimal InserisciPrezzo()
+        public decimal InserisciPrezzo(decimal Prezzo)
         {
-            decimal Prezzo = 0;
+            
             try
             {
 
@@ -49,7 +38,7 @@ namespace Supermercato_DB.Services
                 Prezzo = Convert.ToDecimal(Console.ReadLine());
 
 
-                while (Prezzo <= 0 || Prezzo == null || Prezzo > 1000)
+                while (Prezzo <= 0 || Prezzo > 1000)
                 {
                     Console.WriteLine("\nInserisci un prezzo valido!");
                     Prezzo = Convert.ToDecimal(Console.ReadLine());
@@ -75,7 +64,7 @@ namespace Supermercato_DB.Services
 
                     }
 
-                } while (Prezzo <= 0 || Prezzo == null || Prezzo is string || Prezzo > 1000);
+                } while (Prezzo <= 0 || Prezzo is string || Prezzo > 1000);
             }
             catch (OverflowException)
             {
@@ -96,14 +85,14 @@ namespace Supermercato_DB.Services
                     }
 
 
-                } while (Prezzo <= 0 || Prezzo == null || Prezzo is string || Prezzo > 1000);
+                } while (Prezzo <= 0 || Prezzo is string || Prezzo > 1000);
 
             }
             return Prezzo;
         }
-        public int InserisciQuantita()
+        public int InserisciQuantita(int Quantita)
         {
-            int Quantita = 0;
+            
 
             try
             {
@@ -163,6 +152,17 @@ namespace Supermercato_DB.Services
             }
             return Quantita;
         }
+        public bool AddProduct(Product product)
+        {
+
+            product.Nome =InserisciNome(product.Nome);
+            product.Prezzo = InserisciPrezzo(product.Prezzo);
+            product.Quantita = InserisciQuantita(product.Quantita);
+
+            return true;
+
+        }
+
         public int AddProductDescription(Product product, ICategoryRepository categoryRepository)
         {
             int IdCategoria = 0;
@@ -180,9 +180,9 @@ namespace Supermercato_DB.Services
             return IdCategoria;
         }
 
-        public bool MenuForUpdatingProduct(IProductRepository productRepository, ICategoryRepository categoryRepository,bool permanenza)
+        public bool MenuForUpdatingProduct(IProductRepository productRepository, ICategoryRepository categoryRepository, bool permanenza)
         {
-            
+
             int IdProdottoModifica = 0;
             do
             {
@@ -205,13 +205,13 @@ namespace Supermercato_DB.Services
             } while (SceltaMenu <= 0 || SceltaMenu is string || SceltaMenu > 5);
 
             Product prodotto = new Product();
-            
+
             switch (SceltaMenu)
             {
                 case 1:
                     Console.WriteLine("  MODIFICA PREZZO  ");
 
-                    prodotto.Prezzo = InserisciPrezzo();
+                    prodotto.Prezzo = InserisciPrezzo(prodotto.Prezzo);
 
                     productRepository.GetAllProducts();
                     do
@@ -219,14 +219,14 @@ namespace Supermercato_DB.Services
 
                         IdProdottoModifica = GetId(mxs);
 
-                    } while (!productRepository.UpdateProductByIdString(prodotto,IdProdottoModifica));
+                    } while (!productRepository.UpdateProductByIdString(prodotto, IdProdottoModifica));
 
 
                     break;
                 case 2:
                     Console.WriteLine("  MODIFICA PREZZO E QUANTITA'  ");
-                    prodotto.Prezzo = InserisciPrezzo();
-                    prodotto.Quantita = InserisciQuantita();
+                    prodotto.Prezzo = InserisciPrezzo(prodotto.Prezzo);
+                    prodotto.Quantita = InserisciQuantita(prodotto.Quantita);
 
                     productRepository.GetAllProducts();
 
@@ -235,11 +235,12 @@ namespace Supermercato_DB.Services
 
                         IdProdottoModifica = GetId(mxs);
 
-                    } while (!productRepository.UpdateProductByIdString(prodotto,IdProdottoModifica));
+                    } while (!productRepository.UpdateProductByIdString(prodotto, IdProdottoModifica));
 
                     break;
                 case 3:
-                    int IdCategoria = 0;
+
+
                     Console.WriteLine("  MODIFICA CATEGORIA PRODOTTO  ");
                     categoryRepository.GetProductsDescription();
                     do
@@ -256,7 +257,7 @@ namespace Supermercato_DB.Services
                     {
                         IdProdottoModifica = GetId(mxs);
 
-                    } while (!productRepository.UpdateProductByIdString(prodotto,IdProdottoModifica));
+                    } while (!productRepository.UpdateProductByIdString(prodotto, IdProdottoModifica));
 
 
 
@@ -264,10 +265,10 @@ namespace Supermercato_DB.Services
                     break;
                 case 4:
                     Console.WriteLine("  MODIFICA L' INTERO PRODOTTO  ");
-                   
-                    prodotto.Nome = InserisciNome();
-                    prodotto.Prezzo = InserisciPrezzo();
-                    prodotto.Quantita = InserisciQuantita();
+
+                    prodotto.Nome = InserisciNome(prodotto.Nome);
+                    prodotto.Prezzo = InserisciPrezzo(prodotto.Prezzo);
+                    prodotto.Quantita = InserisciQuantita(prodotto.Quantita);
 
                     categoryRepository.GetProductsDescription();
 
@@ -284,12 +285,12 @@ namespace Supermercato_DB.Services
                     {
                         IdProdottoModifica = GetId(mxs);
 
-                    } while (!productRepository.UpdateProductByIdString(prodotto,IdProdottoModifica));
+                    } while (!productRepository.UpdateProductByIdString(prodotto, IdProdottoModifica));
 
                     break;
                 case 5:
                     Console.WriteLine("\nModifica terminata");
-                     permanenza = false;
+                    permanenza = false;
                     break;
 
 
@@ -323,6 +324,17 @@ namespace Supermercato_DB.Services
 
 
             return Id;
+        }
+
+
+        public int InserisciNumero(int? num)
+        {
+            if(num == null)
+            {
+                throw new ArgumentNullException();
+            }
+            
+            return (int)num;
         }
     }
 }

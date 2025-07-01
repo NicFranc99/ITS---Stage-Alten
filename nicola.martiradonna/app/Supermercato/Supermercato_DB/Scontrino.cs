@@ -15,7 +15,6 @@ namespace Supermercato_DB
         public List<Product> ListaSpesa = new List<Product>();
 
 
-
         public bool Menu(IProductRepository productRepository,IProductService productService)
         {
             do
@@ -25,7 +24,7 @@ namespace Supermercato_DB
                 {
                     try
                     {
-                        Console.WriteLine("\n1) Inserisci un prodotto nel carrello\n2) Stampa Scontrino\n3) Esci ");
+                        Console.WriteLine("\n1) Inserisci un prodotto nel carrello\n2) Stampa Scontrino\n3) Genera nuovo Scontrino\n4) Chiudi Scontrino ");
                         sceltaUtente = Convert.ToInt32(Console.ReadLine());
                     }
                     catch (FormatException)
@@ -33,7 +32,7 @@ namespace Supermercato_DB
 
                     }
 
-                } while (sceltaUtente < 1 || sceltaUtente > 3 || sceltaUtente is string);
+                } while (sceltaUtente < 1 || sceltaUtente > 4 || sceltaUtente is string);
 
 
                 switch (sceltaUtente)
@@ -48,9 +47,15 @@ namespace Supermercato_DB
 
                         break;
                     case 3:
+                        Scontrino scontrino = new Scontrino();
+                        return true;
+
+                        
+                    case 4:
 
                         Console.WriteLine("\n Scontrino terminato  ");
-                        return false;
+                        
+                        return false ;
 
                 }
 
@@ -71,7 +76,7 @@ namespace Supermercato_DB
             do
             {
 
-                    QuantitàTastiera = productService.InserisciQuantita();
+                    QuantitàTastiera = productService.InserisciQuantita(QuantitàTastiera);
 
                 //SE LA QUANTITA' INSERITA NON E' DISPONIBILE PER QUEL PRODOTTO FA REINSERIRE LA QUANTITA'
             } while (!productRepository.IsProductQuantityAvaible(IdProdottoCarrello, QuantitàTastiera));

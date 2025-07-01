@@ -57,7 +57,7 @@ namespace Supermercato_DB.Repos
             }
         }
 
-        public bool CreateNewProduct(Product product, int IdDescription)
+        public bool CreateNewProduct(Product product)
         {
             string query = @"INSERT INTO market.prodotti (Nome,Prezzo,Quantita,Id_Categoria) 
                              VALUES(@nome,@prezzo,@quantita,@idDescription);";
@@ -72,7 +72,7 @@ namespace Supermercato_DB.Repos
                         command.Parameters.AddWithValue("nome", product.Nome);
                         command.Parameters.AddWithValue("prezzo", product.Prezzo);
                         command.Parameters.AddWithValue("quantita", product.Quantita);
-                        command.Parameters.AddWithValue("idDescription", IdDescription);
+                        command.Parameters.AddWithValue("idDescription", product.Id_Categoria);
 
                         var rowsAffected = command.ExecuteNonQuery();
 
@@ -308,7 +308,7 @@ namespace Supermercato_DB.Repos
                             }
                             if (!reader.HasRows)
                             {
-                                Console.WriteLine($"!! Nessun prodotto trovato con id: {idProdotto}  !!");
+                                Console.WriteLine($"\n!! Nessun prodotto trovato con id: {idProdotto}  !!");
                                 return false;
                             }
                             reader.Close();
@@ -320,11 +320,11 @@ namespace Supermercato_DB.Repos
 
                         if (rowsAffected > 0)
                         {
-                            Console.WriteLine("!! Prodotto aggiornato con successo  !!");
+                            Console.WriteLine("\n!! Prodotto aggiornato con successo  !!");
                             return true;
 
                         }
-                        Console.WriteLine($"!!  Nessun prodotto trovato con id: {idProdotto}  !!");
+                        Console.WriteLine($"\n!!  Nessun prodotto trovato con id: {idProdotto}  !!");
                         return false;
 
                     }
@@ -391,10 +391,10 @@ namespace Supermercato_DB.Repos
 
                         if(rowsAffected > 0)
                         {
-                            Console.WriteLine("!! Prodotto aggiornato con successo  !!");
+                            Console.WriteLine("\n!! Prodotto aggiornato con successo  !!");
                             return true;
                         }
-                        Console.WriteLine($"!!  Nessun prodotto trovato con id: {idProdotto}  !!");
+                        Console.WriteLine($"\n!!  Nessun prodotto trovato con id: {idProdotto}  !!");
                         return false;
 
                     }

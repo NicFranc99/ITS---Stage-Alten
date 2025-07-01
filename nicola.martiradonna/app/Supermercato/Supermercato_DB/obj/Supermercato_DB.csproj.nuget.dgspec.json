@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nmartiradonna\\Desktop\\repo\\ITS---Stage-Alten\\nicola.martiradonna\\app\\Supermercato\\Supermercato_DB\\Supermercato_DB.csproj": {}
+    "C:\\Users\\mcipriani2\\Desktop\\ITS repo\\ITS---Stage-Alten\\nicola.martiradonna\\app\\Supermercato\\Supermercato_DB\\Supermercato_DB.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nmartiradonna\\Desktop\\repo\\ITS---Stage-Alten\\nicola.martiradonna\\app\\Supermercato\\Supermercato_DB\\Supermercato_DB.csproj": {
+    "C:\\Users\\mcipriani2\\Desktop\\ITS repo\\ITS---Stage-Alten\\nicola.martiradonna\\app\\Supermercato\\Supermercato_DB\\Supermercato_DB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nmartiradonna\\Desktop\\repo\\ITS---Stage-Alten\\nicola.martiradonna\\app\\Supermercato\\Supermercato_DB\\Supermercato_DB.csproj",
+        "projectUniqueName": "C:\\Users\\mcipriani2\\Desktop\\ITS repo\\ITS---Stage-Alten\\nicola.martiradonna\\app\\Supermercato\\Supermercato_DB\\Supermercato_DB.csproj",
         "projectName": "Supermercato_DB",
-        "projectPath": "C:\\Users\\nmartiradonna\\Desktop\\repo\\ITS---Stage-Alten\\nicola.martiradonna\\app\\Supermercato\\Supermercato_DB\\Supermercato_DB.csproj",
-        "packagesPath": "C:\\Users\\nmartiradonna\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nmartiradonna\\Desktop\\repo\\ITS---Stage-Alten\\nicola.martiradonna\\app\\Supermercato\\Supermercato_DB\\obj\\",
+        "projectPath": "C:\\Users\\mcipriani2\\Desktop\\ITS repo\\ITS---Stage-Alten\\nicola.martiradonna\\app\\Supermercato\\Supermercato_DB\\Supermercato_DB.csproj",
+        "packagesPath": "C:\\Users\\mcipriani2\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mcipriani2\\Desktop\\ITS repo\\ITS---Stage-Alten\\nicola.martiradonna\\app\\Supermercato\\Supermercato_DB\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\nmartiradonna\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mcipriani2\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -44,7 +44,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -54,9 +54,21 @@
               "target": "Package",
               "version": "[6.0.2, )"
             },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[9.0.6, )"
+            },
+            "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[9.0.6, )"
+            },
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.9.0, )"
+            },
+            "xunit.assert": {
+              "target": "Package",
+              "version": "[2.9.3, )"
             }
           },
           "imports": [
@@ -75,7 +87,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
