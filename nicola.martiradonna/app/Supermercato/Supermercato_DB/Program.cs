@@ -3,14 +3,32 @@ using Supermercato_DB.Interfaces;
 using Supermercato_DB.Repos;
 using Supermercato_DB.Services;
 using Xunit;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+
+
+HostApplicationBuilder builder = Host.CreateApplicationBuilder();
+
+
+var userService1 = builder.Services.AddScoped<IUserService, UserService>();
+var userRepo= builder.Services.AddScoped<IUserRepository, UserRepository>();
+var productService1 = builder.Services.AddScoped<IProductService, ProductService>();
+var productRepo = builder.Services.AddScoped<IProductRepository, ProductRepository>();
+var categoryRepo = builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 
 
 
-IUserRepository userRepository = new UserRepository();
-IProductRepository productRepository = new ProductRepository();
-ICategoryRepository categoryRepository = new CategoryRepository();
-IProductService productService = new ProductService();
-IUserService userService = new UserService();
+var serviceProvider = builder.Services.BuildServiceProvider();
+
+
+IUserService userService = serviceProvider.GetRequiredService<IUserService>();
+IUserRepository userRepository = serviceProvider.GetRequiredService<IUserRepository>();
+
+IProductRepository productRepository = serviceProvider.GetRequiredService<IProductRepository>();
+ICategoryRepository categoryRepository = serviceProvider.GetRequiredService<ICategoryRepository>();
+
+IProductService productService = serviceProvider.GetRequiredService<IProductService>();
+
 
 
 
